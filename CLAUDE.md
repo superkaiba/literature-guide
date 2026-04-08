@@ -61,7 +61,10 @@ For each selected paper, dispatch a subagent to produce a rich analysis. The sub
 2. **Web-search each author** for affiliations, h-index, notable prior work
 3. **Web-search for discussion** of the paper (Twitter/X, Reddit, blog posts)
 
-Then produce this structured analysis:
+Then produce this structured analysis. BE THOROUGH. Each section should be multiple
+sentences or paragraphs. Include specific numbers, effect sizes, p-values, model names,
+dataset sizes. Do NOT write vague one-liners — write like a knowledgeable reviewer who
+has actually read the paper and is giving an honest, detailed assessment to a colleague.
 
 ```markdown
 ---
@@ -81,68 +84,92 @@ triage: "read in full"|"read abstract + key findings"|"awareness only"
 
 # Paper Title
 
-## Plain Language Summary
-3-5 sentences, no jargon, explain like talking to a smart friend.
-Start with "So what — why should anyone care?" framing.
+## Phase 1: Initial Summary
 
-## Confidence & Provenance
-A structured assessment of how much to trust this paper:
+### 1. Overview
+What kind of paper this is (short empirical, full conference paper, theoretical, position paper,
+blog post, etc.), who wrote it (lab/institution), where it's published or posted, and what
+question it asks. 2-4 sentences.
+
+### 2. Core Components
+
+**Main Goal & Hypothesis.** What the authors set out to show, in specific terms. Not just
+"they study X" but "they aim to show that Y causes Z, measured by W." Include the specific
+framing/terminology they use.
+
+**Key Findings.** 3-6 findings, each as a PARAGRAPH (not a one-liner). Include:
+- Specific quantitative results (exact numbers, percentages, effect sizes, p-values)
+- What comparison/baseline makes the number meaningful
+- Whether the result is surprising or expected given prior work
+- Any important caveats on that specific finding
+
+**Methodology.** Detailed: which models (name, size), which datasets (name, size),
+how many runs/seeds, what statistical tests, what hyperparameters matter. Someone
+should be able to roughly assess the experimental design from this section alone.
+
+**Distinctive Features.** What specifically sets this apart from the 2-3 most related
+prior papers? Not "it's novel" but "unlike X (2024) which did Y, this paper does Z,
+which matters because W."
+
+**Limitations & Open Questions.** Two categories:
+- *Authors' own stated limitations* — what they acknowledge
+- *Obvious gaps the authors don't mention* — what YOU notice is missing
+Be specific: "only 2 models" is less useful than "only Qwen2.5-7B and Llama-3.1-8B;
+no frontier or closed models, which limits generalizability of the attack to models
+with stronger safety training."
+
+**Implications.** How this connects to broader research directions, threat models,
+or practical deployment concerns. Include specific connections to other recent work
+where relevant.
+
+## Phase 2: Critical Assessment
+
+### Conclusions vs. Evidence
+Where are the paper's claims well-supported by data, and where do they oversell?
+Be specific: "The X result is clean and well-controlled, but the Y claim relies on
+an effect size of only Z%, which is tiny relative to the gap between [baseline] and
+[ceiling]." Call out framing that goes beyond what the data show.
+
+### Questionable Assumptions
+Name them explicitly. What does the paper assume that might not hold? What would
+break if the assumption fails? E.g., "System-prompt access to Agent0 is assumed;
+whether the attack works through user-prompt-only access is untested and would be
+a much more realistic threat model."
+
+### Fit in Field
+How does this sit relative to the broader research landscape? Is it a proof-of-concept,
+a mature contribution, a "+MAS extension paper"? Who should care about it and why?
+What's the natural follow-on work?
+
+## Phase 3: Reference Material
+
+### Confidence & Provenance
 - **Confidence: HIGH/MEDIUM/LOW** — one-line rationale
-- **Author credibility:** Senior author's h-index, top prior papers, lab reputation
-- **Venue/status:** Peer-reviewed (where?), preprint, blog post, etc.
+- **Author credibility:** Senior author's h-index, top 2-3 prior papers, lab reputation
+- **Venue/status:** Peer-reviewed (where?), preprint, blog post. If preprint, flag it.
 - **Version:** First release, or revision? If revision, what changed? (web-search arXiv version history)
 - **Code/data:** Released? Link if available. "No code" is a yellow flag for empirical papers.
-- **Replication/discussion:** Has anyone independently validated, criticized, or extended this? (web-search)
+- **Community reception:** Endorsements, criticism, or silence from notable researchers. Citation count if older than a few days.
 
-## Triage Recommendation
-One of: **Read in full** / **Read abstract + key findings** / **Awareness only**
-Brief justification (1 sentence): why this level of attention.
+### Triage Recommendation
+**Read in full** / **Read abstract + key findings** / **Awareness only**
+One sentence justifying the recommendation.
 
-## About the Authors
-Web-searched: affiliations, notable prior work, h-index, citation counts.
-Flag if any author has a history of retracted or controversial work.
+### Key Terms
+Define 5-10 terms that a reader needs to understand this paper. Include technical
+terms, statistical methods, and domain-specific jargon. Write actual definitions,
+not just the term name. E.g.:
+- **Mann-Whitney U test**: nonparametric test for whether two distributions differ;
+  used here to compare response rates under subliminal vs. random tokens.
 
-## Overview
-What this paper is and its context.
-
-## Main Goal
-What the authors set out to show/prove/build.
-
-## Key Findings
-- Finding 1: ...
-- Finding 2: ...
-- Finding 3: ...
-(3-5 bullets)
-
-## Methodology
-How they did it. Models used, datasets, evaluation approach.
-
-## What's Novel
-What's genuinely new here vs. incremental.
-
-## Limitations & Open Questions
-Honest assessment of weaknesses.
-
-## Implications
-Why this matters for the field.
-
-## Critical Assessment
-Your informed take on quality, significance, and caveats.
-
-## Community Reception
-What's the discussion like? (web-search Twitter/X, Reddit, LessWrong, blog responses)
-- Endorsements or criticism from notable researchers
-- Citation count if paper is older than a few days
-- If no discussion found yet, say so — that's also informative
-
-## Key Terms
-- **Term**: Definition in context of this paper.
-
-## Related Papers
-### [Paper Title](URL) (Year) — *Essential/Recommended/Optional*
-Brief description.
-*Why relevant: ...*
-(2-4 related papers, web-verified, real papers only)
+### Suggested Related Work
+3-6 papers, each with:
+- Full citation with URL (web-verified, real papers only)
+- Priority tag: **Essential** / **Recommended** / **Optional**
+- 2-3 sentences explaining WHY this specific paper is relevant — not a generic
+  description of the paper, but how it connects to the paper under review.
+  E.g.: "Direct predecessor; introduces subliminal prompting in single user-LLM
+  settings and the entanglement token framing this paper builds on."
 ```
 
 ### Step 4: Write Output Files
