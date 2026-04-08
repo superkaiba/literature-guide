@@ -1,0 +1,58 @@
+topics:
+  - mechanistic interpretability
+  - AI safety
+  - AI alignment
+  - language model personas
+  - emergent misalignment
+  - subliminal learning
+  - superposition features
+
+arxiv_queries:
+  - "mechanistic interpretability"
+  - "AI alignment"
+  - "AI safety"
+  - "language model personas"
+  - "emergent misalignment"
+  - "subliminal learning"
+  - "superposition features"
+
+rss_feeds:
+  alignment_forum: "https://www.alignmentforum.org/feed.xml?view=community-rss"
+  lesswrong: "https://www.lesswrong.com/feed.xml?view=community-rss"
+  huggingface_papers: "https://huggingface.co/papers/rss"
+  transformer_circuits: "https://transformer-circuits.pub/rss.xml"
+  eleutherai: "https://blog.eleuther.ai/rss/"
+  anthropic_research: "https://rsshub.app/anthropic/research"
+  deepmind: "https://deepmind.google/blog/rss.xml"
+  openai_research: "https://openai.com/news/rss.xml"
+  redwood_research: "https://blog.redwoodresearch.org/feed"
+  bair: "https://bair.berkeley.edu/blog/feed.xml"
+
+reddit_subreddits:
+  - MachineLearning
+  - mlsafety
+  - aisafety
+
+bluesky_accounts:
+  - anthropic.bsky.social
+  - deepmind.bsky.social
+
+newsletter_sources:
+  import_ai:
+    url: "https://importai.substack.com/feed"
+    type: rss
+  the_gradient:
+    url: "https://thegradient.pub/rss/"
+    type: rss
+  cais:
+    url: "https://safe.ai/newsletter"
+    type: scrape
+
+opportunity_sources:
+  eighty_thousand_hours: "https://jobs.80000hours.org/jobs"
+  aisafety_world: "https://aisafety.world"
+
+max_papers: 20
+max_opportunities: 10
+
+github_repo_url: ""
