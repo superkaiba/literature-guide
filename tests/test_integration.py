@@ -53,14 +53,18 @@ def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_r
 
     summarizer_client = MagicMock()
     summarizer_response = MagicMock()
-    summarizer_response.content = [MagicMock()]
-    summarizer_response.content[0].text = json.dumps({
+    thinking_block = MagicMock()
+    thinking_block.type = "thinking"
+    text_block = MagicMock()
+    text_block.type = "text"
+    text_block.text = json.dumps({
         "summary": "This paper studies SAEs for interpretability.",
         "why_it_matters": "Advances mechanistic interpretability.",
         "author_info": "Test Author is a researcher at Anthropic.",
         "reliability_assessment": "HIGH confidence. Published by established researchers.",
         "related_papers": [{"title": "Toy Models of Superposition", "url": "https://arxiv.org/abs/2209.10652", "year": 2022, "summary": "Foundational work on superposition."}]
     })
+    summarizer_response.content = [thinking_block, text_block]
     summarizer_client.messages.create.return_value = summarizer_response
 
     # The ranker is called first, then the summarizer
