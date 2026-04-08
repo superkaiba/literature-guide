@@ -76,10 +76,11 @@ Dispatch a subagent to:
 2. **Summarize the user's current work** in 3-5 sentences: what topic, what
    specific experiments, what methods, what models.
 
-3. **Web-search for 3 older papers** (published 1-4 weeks ago, NOT from the
-   last 2-3 days) that are directly relevant to the user's current experiments.
-   These should be papers the user might have missed — not the obvious ones
-   they'd already know about. Search for:
+3. **Web-search for 3 older papers** (NOT from the last 2-3 days — could be
+   from last week, last month, or even a classic from years ago) that are
+   directly relevant to the user's current experiments. These should be papers
+   the user might have missed or not thought to connect to their work — not
+   the obvious ones they'd already know about. Search for:
    - Papers using similar methods on similar problems
    - Papers with findings that would inform the user's current experiments
    - Papers from adjacent fields that have relevant techniques or results
@@ -267,7 +268,7 @@ Top 3-5 most important items with brief context on why they matter.
 (repeat for each paper)
 
 ## Personalized Picks
-Papers from 1-4 weeks ago related to what you're currently working on.
+Older papers (not from today's sources) related to what you're currently working on.
 
 ### [Paper Title](URL)
 **Authors:** ... | **Source:** ... | **Published:** YYYY-MM-DD
