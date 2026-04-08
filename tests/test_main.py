@@ -11,7 +11,7 @@ def _summarized_paper():
     return SummarizedPaper(id="2026-04-07_test", title="Test", authors=["A"], url="https://example.com", doi=None, source="arxiv", published_date="2026-04-06", fetched_date="2026-04-07", topics=["safety"], relevance_score=0.9, summary="Summary.", why_it_matters="Matters.", related_papers=[])
 
 
-@patch("src.main.send_slack_notification")
+@patch("src.main.send_email_notification")
 @patch("src.main.generate_report")
 @patch("src.main.save_paper")
 @patch("src.main.summarize_paper")
@@ -23,7 +23,9 @@ def test_run_pipeline_orchestrates_all_steps(mock_config, mock_fetch, mock_dedup
     cfg = MagicMock()
     cfg.topics = ["safety"]
     cfg.anthropic_api_key = "test"
-    cfg.slack_webhook_url = "https://hooks.slack.com/test"
+    cfg.email_to = "test@example.com"
+    cfg.smtp_user = "sender@gmail.com"
+    cfg.smtp_password = "app-password"
     cfg.github_repo_url = "https://github.com/user/repo"
     cfg.max_papers = 20
     cfg.max_opportunities = 10

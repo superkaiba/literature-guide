@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from src.main import run_pipeline
 
 
-@patch("src.main.send_slack_notification")
+@patch("src.main.send_email_notification")
 @patch("src.fetchers.bluesky.requests.get")
 @patch("src.fetchers.reddit.requests.get")
 @patch("src.fetchers.rss.feedparser.parse")
@@ -71,7 +71,9 @@ def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_r
         return anthropic_clients[idx] if idx < len(anthropic_clients) else MagicMock()
 
     monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
-    monkeypatch.setenv("SLACK_WEBHOOK_URL", "https://hooks.slack.com/test")
+    monkeypatch.setenv("EMAIL_TO", "test@example.com")
+    monkeypatch.setenv("SMTP_USER", "sender@gmail.com")
+    monkeypatch.setenv("SMTP_PASSWORD", "app-password")
 
     with patch("anthropic.Anthropic", side_effect=make_client):
         run_pipeline(config_path=str(tmp_path / "config.yml"))

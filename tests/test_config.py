@@ -14,10 +14,13 @@ def test_load_config_reads_rss_feeds():
 
 
 def test_load_config_reads_env_overrides(monkeypatch):
-    monkeypatch.setenv("SLACK_WEBHOOK_URL", "https://hooks.slack.com/test")
+    monkeypatch.setenv("EMAIL_TO", "test@example.com")
+    monkeypatch.setenv("SMTP_USER", "sender@gmail.com")
+    monkeypatch.setenv("SMTP_PASSWORD", "app-password")
     monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-test")
     config = load_config("config.yml")
-    assert config.slack_webhook_url == "https://hooks.slack.com/test"
+    assert config.email_to == "test@example.com"
+    assert config.smtp_user == "sender@gmail.com"
     assert config.anthropic_api_key == "sk-test"
 
 

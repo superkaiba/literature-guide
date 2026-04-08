@@ -19,7 +19,7 @@ from src.ranker import rank_papers
 from src.summarizer import summarize_paper
 from src.storage import save_paper
 from src.report import generate_report
-from src.notify import send_slack_notification
+from src.notify import send_email_notification
 
 logger = logging.getLogger(__name__)
 
@@ -158,17 +158,19 @@ def run_pipeline(config_path: str = "config.yml") -> None:
     )
     logger.info("Report generated: %s", report_path)
 
-    # 8. Notify via Slack
+    # 8. Notify via email
     report_url = report_path
     if config.github_repo_url:
         report_url = f"{config.github_repo_url}/blob/main/{report_path}"
-    send_slack_notification(
+    send_email_notification(
         summarized,
         trimmed_opportunities,
-        webhook_url=config.slack_webhook_url,
         report_url=report_url,
+        to_email=config.email_to,
+        smtp_user=config.smtp_user,
+        smtp_password=config.smtp_password,
     )
-    logger.info("Slack notification sent")
+    logger.info("Email notification sent")
 
     logger.info("Pipeline complete — %d papers summarized", len(summarized))
 
