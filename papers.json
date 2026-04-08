@@ -19,25 +19,6 @@
     "related_paper_ids": []
   },
   {
-    "id": "2026-04-08_synthetic-moral-agents-or-sophisticated-mimics",
-    "title": "Synthetic Moral Agents or Sophisticated Mimics?",
-    "authors": [
-      "Han Li"
-    ],
-    "url": "https://doi.org/10.17613/k13dm-vaq64",
-    "doi": "https://doi.org/10.17613/k13dm-vaq64",
-    "source": "openalex",
-    "published_date": "2026-06-30",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "AI alignment",
-      "language model personas"
-    ],
-    "relevance_score": 0.3,
-    "summary_file": "papers/2026-04-08_synthetic-moral-agents-or-sophisticated-mimics.md",
-    "related_paper_ids": []
-  },
-  {
     "id": "2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio",
     "title": "APOLLO: an open platform for\u00a0LLM-based multi-agent interaction research",
     "authors": [
@@ -55,27 +36,6 @@
     ],
     "relevance_score": 0.2,
     "summary_file": "papers/2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space",
-    "title": "Disentangling MLP Neuron Weights in Vocabulary Space",
-    "authors": [
-      "Asaf Avrahamy",
-      "Yoav Gur-Arieh",
-      "Mor Geva"
-    ],
-    "url": "http://arxiv.org/abs/2604.06005v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "mechanistic interpretability",
-      "superposition features"
-    ],
-    "relevance_score": 0.85,
-    "summary_file": "papers/2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space.md",
     "related_paper_ids": []
   },
   {
@@ -208,30 +168,6 @@
     "related_paper_ids": []
   },
   {
-    "id": "2026-04-08_context-value-action-architecture-for-value-driven-large-lan",
-    "title": "Context-Value-Action Architecture for Value-Driven Large Language Model Agents",
-    "authors": [
-      "TianZe Zhang",
-      "Sirui Sun",
-      "Yuhang Xie",
-      "Xin Zhang",
-      "Zhiqiang Wu",
-      "Guojie Song"
-    ],
-    "url": "http://arxiv.org/abs/2604.05939v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "AI alignment",
-      "language model personas"
-    ],
-    "relevance_score": 0.45,
-    "summary_file": "papers/2026-04-08_context-value-action-architecture-for-value-driven-large-lan.md",
-    "related_paper_ids": []
-  },
-  {
     "id": "2026-04-08_the-ethical-and-legal-complexities-of-regulating-companion-a",
     "title": "The Ethical and Legal Complexities of Regulating Companion AI Chatbots",
     "authors": [
@@ -272,25 +208,6 @@
     ],
     "relevance_score": 0.35,
     "summary_file": "papers/2026-04-08_beyond-compromise-pareto-lenient-consensus-for-efficient-mul.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti",
-    "title": "Beyond Behavior: Why AI Evaluation Needs a Cognitive Revolution",
-    "authors": [
-      "Amir Konigsberg"
-    ],
-    "url": "http://arxiv.org/abs/2604.05631v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "AI alignment",
-      "mechanistic interpretability"
-    ],
-    "relevance_score": 0.35,
-    "summary_file": "papers/2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti.md",
     "related_paper_ids": []
   },
   {
@@ -448,25 +365,6 @@
     ],
     "relevance_score": 0.55,
     "summary_file": "papers/2026-04-08_how-does-an-agent-with-multiple-goals-choose-a-target.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_my-picture-of-the-present-in-ai",
-    "title": "My picture of the present in AI",
-    "authors": [
-      "ryan_greenblatt"
-    ],
-    "url": "https://www.alignmentforum.org/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai",
-    "doi": null,
-    "source": "alignment_forum",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "AI safety",
-      "AI alignment"
-    ],
-    "relevance_score": 0.35,
-    "summary_file": "papers/2026-04-08_my-picture-of-the-present-in-ai.md",
     "related_paper_ids": []
   },
   {
@@ -832,6 +730,171 @@
     ],
     "relevance_score": 0.5,
     "summary_file": "papers/2026-04-08_a-survey-on-deep-learning-enabled-automatic-modulation-class.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space",
+    "title": "Disentangling MLP Neuron Weights in Vocabulary Space",
+    "authors": [
+      "Asaf Avrahamy",
+      "Yoav Gur-Arieh",
+      "Mor Geva"
+    ],
+    "url": "http://arxiv.org/abs/2604.06005v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "superposition features"
+    ],
+    "relevance_score": 0.92,
+    "summary_file": "papers/2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_my-picture-of-the-present-in-ai",
+    "title": "My picture of the present in AI",
+    "authors": [
+      "ryan_greenblatt"
+    ],
+    "url": "https://www.alignmentforum.org/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai",
+    "doi": null,
+    "source": "alignment_forum",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment",
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.65,
+    "summary_file": "papers/2026-04-08_my-picture-of-the-present-in-ai.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_alignment-vs-safety-part-2-alignment",
+    "title": "Alignment vs. Safety, part 2: Alignment",
+    "authors": [
+      "David Scott Krueger (formerly: capybaralet)"
+    ],
+    "url": "https://www.lesswrong.com/posts/jzSMt555GvfwxWtQo/alignment-vs-safety-part-2-alignment",
+    "doi": null,
+    "source": "lesswrong",
+    "published_date": "2026-04-08",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_alignment-vs-safety-part-2-alignment.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti",
+    "title": "Beyond Behavior: Why AI Evaluation Needs a Cognitive Revolution",
+    "authors": [
+      "Amir Konigsberg"
+    ],
+    "url": "http://arxiv.org/abs/2604.05631v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.45,
+    "summary_file": "papers/2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_is-claude-s-genuine-uncertainty-performative",
+    "title": "Is Claude's genuine uncertainty performative?",
+    "authors": [
+      "jordinne"
+    ],
+    "url": "https://www.lesswrong.com/posts/M6CYdfbFajiZxJFfm/is-claude-s-genuine-uncertainty-performative",
+    "doi": null,
+    "source": "lesswrong",
+    "published_date": "2026-04-08",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "language model personas"
+    ],
+    "relevance_score": 0.45,
+    "summary_file": "papers/2026-04-08_is-claude-s-genuine-uncertainty-performative.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_synthetic-moral-agents-or-sophisticated-mimics",
+    "title": "Synthetic Moral Agents or Sophisticated Mimics?",
+    "authors": [
+      "Han Li"
+    ],
+    "url": "https://doi.org/10.17613/k13dm-vaq64",
+    "doi": "https://doi.org/10.17613/k13dm-vaq64",
+    "source": "openalex",
+    "published_date": "2026-06-30",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "language model personas"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_synthetic-moral-agents-or-sophisticated-mimics.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_context-value-action-architecture-for-value-driven-large-lan",
+    "title": "Context-Value-Action Architecture for Value-Driven Large Language Model Agents",
+    "authors": [
+      "TianZe Zhang",
+      "Sirui Sun",
+      "Yuhang Xie",
+      "Xin Zhang",
+      "Zhiqiang Wu",
+      "Guojie Song"
+    ],
+    "url": "http://arxiv.org/abs/2604.05939v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "language model personas",
+      "AI alignment"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_context-value-action-architecture-for-value-driven-large-lan.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_social-dynamics-as-critical-vulnerabilities-that-undermine-o",
+    "title": "Social Dynamics as Critical Vulnerabilities that Undermine Objective Decision-Making in LLM Collectives",
+    "authors": [
+      "Changgeon Ko",
+      "Jisu Shin",
+      "Hoyun Song",
+      "Huije Lee",
+      "Eui Jun Hwang",
+      "Jong C. Park"
+    ],
+    "url": "http://arxiv.org/abs/2604.06091v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "AI safety"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_social-dynamics-as-critical-vulnerabilities-that-undermine-o.md",
     "related_paper_ids": []
   }
 ]
