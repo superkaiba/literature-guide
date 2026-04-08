@@ -20,11 +20,11 @@
   },
   {
     "id": "2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio",
-    "title": "APOLLO: an open platform for\u00a0LLM-based multi-agent interaction research",
+    "title": "APOLLO: an open platform for LLM-based multi-agent interaction research",
     "authors": [
       "Abel Johny",
       "Eike Schneiders",
-      "J\u00e9r\u00e9mie Clos"
+      "Jérémie Clos"
     ],
     "url": "https://doi.org/10.1007/978-3-031-97177-8_10",
     "doi": "https://doi.org/10.1007/978-3-031-97177-8_10",
@@ -290,7 +290,7 @@
   },
   {
     "id": "2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la",
-    "title": "A Risk\u2013Utility Optimization Framework for Governing Large Language Model Responses",
+    "title": "A Risk–Utility Optimization Framework for Governing Large Language Model Responses",
     "authors": [
       "Jinghao Chang"
     ],
@@ -424,7 +424,7 @@
     "title": "Brain-to-Speech: Prosody Feature Engineering and Transformer-Based Reconstruction",
     "authors": [
       "Mohammed Salah Al-Radhi",
-      "G\u00e9za N\u00e9meth",
+      "Géza Németh",
       "Andon Tchechmedjiev",
       "Binbin Xu"
     ],
@@ -895,6 +895,161 @@
     ],
     "relevance_score": 0.35,
     "summary_file": "papers/2026-04-08_social-dynamics-as-critical-vulnerabilities-that-undermine-o.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_emotion-concepts-and-their-function-in-a-large-language-model",
+    "title": "Emotion Concepts and their Function in a Large Language Model",
+    "authors": [
+      "Nicholas Sofroniew",
+      "Isaac Kauvar",
+      "William Saunders",
+      "Runjin Chen",
+      "Tom Henighan",
+      "Chris Olah",
+      "Jack Lindsey"
+    ],
+    "url": "https://transformer-circuits.pub/2026/emotions/index.html",
+    "doi": null,
+    "source": "blog",
+    "published_date": "2026-04-02",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment"
+    ],
+    "relevance_score": 0.95,
+    "summary_file": "papers/2026-04-08_emotion-concepts-and-their-function-in-a-large-language-model.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_the-persistent-vulnerability-of-aligned-ai-systems",
+    "title": "The Persistent Vulnerability of Aligned AI Systems",
+    "authors": [
+      "Aengus Lynch"
+    ],
+    "url": "https://arxiv.org/abs/2604.00324",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment",
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.92,
+    "summary_file": "papers/2026-04-08_the-persistent-vulnerability-of-aligned-ai-systems.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_are-latent-reasoning-models-easily-interpretable",
+    "title": "Are Latent Reasoning Models Easily Interpretable?",
+    "authors": [
+      "Connor Dilgren",
+      "Sarah Wiegreffe"
+    ],
+    "url": "https://arxiv.org/abs/2604.04902",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-06",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety"
+    ],
+    "relevance_score": 0.88,
+    "summary_file": "papers/2026-04-08_are-latent-reasoning-models-easily-interpretable.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_finding-belief-geometries-with-sparse-autoencoders",
+    "title": "Finding Belief Geometries with Sparse Autoencoders",
+    "authors": [
+      "Matthew Levinson"
+    ],
+    "url": "https://arxiv.org/abs/2604.02685",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-03",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "superposition features"
+    ],
+    "relevance_score": 0.87,
+    "summary_file": "papers/2026-04-08_finding-belief-geometries-with-sparse-autoencoders.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_detecting-multi-agent-collusion-through-multi-agent-interpretability",
+    "title": "Detecting Multi-Agent Collusion Through Multi-Agent Interpretability",
+    "authors": [
+      "Aaron Rose",
+      "Carissa Cullen",
+      "Brandon Gary Kaplowitz",
+      "Christian Schroeder de Witt"
+    ],
+    "url": "https://arxiv.org/abs/2604.01151",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.86,
+    "summary_file": "papers/2026-04-08_detecting-multi-agent-collusion-through-multi-agent-interpretability.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_from-data-statistics-to-feature-geometry-how-correlations-shape-superposition",
+    "title": "From Data Statistics to Feature Geometry: How Correlations Shape Superposition",
+    "authors": [
+      "Lucas Prieto",
+      "Edward Stevinson",
+      "Melih Barsbey",
+      "Tolga Birdal",
+      "Pedro A.M. Mediano"
+    ],
+    "url": "https://arxiv.org/abs/2603.09972",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-03-10",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "superposition features"
+    ],
+    "relevance_score": 0.86,
+    "summary_file": "papers/2026-04-08_from-data-statistics-to-feature-geometry-how-correlations-shape-superposition.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_quantifying-self-preservation-bias-in-large-language-models",
+    "title": "Quantifying Self-Preservation Bias in Large Language Models",
+    "authors": [
+      "Matteo Migliarini",
+      "Joaquin P. Pizzini",
+      "Luca Moresca",
+      "Valerio Santini",
+      "Indro Spinelli",
+      "Fabio Galasso"
+    ],
+    "url": "https://arxiv.org/abs/2604.02174",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-03",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment",
+      "language model personas"
+    ],
+    "relevance_score": 0.84,
+    "summary_file": "papers/2026-04-08_quantifying-self-preservation-bias-in-large-language-models.md",
     "related_paper_ids": []
   }
 ]
