@@ -79,28 +79,6 @@
     "related_paper_ids": []
   },
   {
-    "id": "2026-04-08_mechanistic-circuit-based-knowledge-editing-in-large-languag",
-    "title": "Mechanistic Circuit-Based Knowledge Editing in Large Language Models",
-    "authors": [
-      "Tianyi Zhao",
-      "Yinhan He",
-      "Wendy Zheng",
-      "Chen Chen"
-    ],
-    "url": "http://arxiv.org/abs/2604.05876v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "mechanistic interpretability",
-      "AI safety"
-    ],
-    "relevance_score": 0.75,
-    "summary_file": "papers/2026-04-08_mechanistic-circuit-based-knowledge-editing-in-large-languag.md",
-    "related_paper_ids": []
-  },
-  {
     "id": "2026-04-08_how-llms-follow-instructions-skillful-coordination-not-a-uni",
     "title": "How LLMs Follow Instructions: Skillful Coordination, Not a Universal Mechanism",
     "authors": [
@@ -118,27 +96,6 @@
     ],
     "relevance_score": 0.72,
     "summary_file": "papers/2026-04-08_how-llms-follow-instructions-skillful-coordination-not-a-uni.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_my-picture-of-the-present-in-ai",
-    "title": "My picture of the present in AI",
-    "authors": [
-      "ryan_greenblatt"
-    ],
-    "url": "https://www.alignmentforum.org/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai",
-    "doi": null,
-    "source": "alignment_forum",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "AI safety",
-      "AI alignment",
-      "mechanistic interpretability",
-      "emergent misalignment"
-    ],
-    "relevance_score": 0.65,
-    "summary_file": "papers/2026-04-08_my-picture-of-the-present-in-ai.md",
     "related_paper_ids": []
   },
   {
@@ -230,25 +187,6 @@
     "related_paper_ids": []
   },
   {
-    "id": "2026-04-08_how-does-an-agent-with-multiple-goals-choose-a-target",
-    "title": "How Does an Agent with Multiple Goals Choose a Target?",
-    "authors": [
-      "sturb"
-    ],
-    "url": "https://www.lesswrong.com/posts/XWmqSTX89rgqeqyfv/how-does-an-agent-with-multiple-goals-choose-a-target",
-    "doi": null,
-    "source": "lesswrong",
-    "published_date": "2026-04-08",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "mechanistic interpretability",
-      "AI safety"
-    ],
-    "relevance_score": 0.55,
-    "summary_file": "papers/2026-04-08_how-does-an-agent-with-multiple-goals-choose-a-target.md",
-    "related_paper_ids": []
-  },
-  {
     "id": "2026-04-08_lag-xai-a-lie-inspired-affine-geometric-framework-for-interp",
     "title": "LAG-XAI: A Lie-Inspired Affine Geometric Framework for Interpretable Paraphrasing in Transformer Latent Spaces",
     "authors": [
@@ -291,27 +229,6 @@
     ],
     "relevance_score": 0.45,
     "summary_file": "papers/2026-04-08_context-value-action-architecture-for-value-driven-large-lan.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll",
-    "title": "Stories of Your Life as Others: A Round-Trip Evaluation of LLM-Generated Life Stories Conditioned on Rich Psychometric Profiles",
-    "authors": [
-      "Ben Wigler",
-      "Maria Tsfasman",
-      "Tiffany Matej Hrkalovic"
-    ],
-    "url": "http://arxiv.org/abs/2604.06071v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "language model personas",
-      "AI alignment"
-    ],
-    "relevance_score": 0.45,
-    "summary_file": "papers/2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll.md",
     "related_paper_ids": []
   },
   {
@@ -471,6 +388,85 @@
     ],
     "relevance_score": 0.25,
     "summary_file": "papers/2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_mechanistic-circuit-based-knowledge-editing-in-large-languag",
+    "title": "Mechanistic Circuit-Based Knowledge Editing in Large Language Models",
+    "authors": [
+      "Tianyi Zhao",
+      "Yinhan He",
+      "Wendy Zheng",
+      "Chen Chen"
+    ],
+    "url": "http://arxiv.org/abs/2604.05876v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_mechanistic-circuit-based-knowledge-editing-in-large-languag.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll",
+    "title": "Stories of Your Life as Others: A Round-Trip Evaluation of LLM-Generated Life Stories Conditioned on Rich Psychometric Profiles",
+    "authors": [
+      "Ben Wigler",
+      "Maria Tsfasman",
+      "Tiffany Matej Hrkalovic"
+    ],
+    "url": "http://arxiv.org/abs/2604.06071v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "language model personas"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_how-does-an-agent-with-multiple-goals-choose-a-target",
+    "title": "How Does an Agent with Multiple Goals Choose a Target?",
+    "authors": [
+      "sturb"
+    ],
+    "url": "https://www.lesswrong.com/posts/XWmqSTX89rgqeqyfv/how-does-an-agent-with-multiple-goals-choose-a-target",
+    "doi": null,
+    "source": "lesswrong",
+    "published_date": "2026-04-08",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI alignment"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_how-does-an-agent-with-multiple-goals-choose-a-target.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_my-picture-of-the-present-in-ai",
+    "title": "My picture of the present in AI",
+    "authors": [
+      "ryan_greenblatt"
+    ],
+    "url": "https://www.alignmentforum.org/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai",
+    "doi": null,
+    "source": "alignment_forum",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_my-picture-of-the-present-in-ai.md",
     "related_paper_ids": []
   }
 ]
