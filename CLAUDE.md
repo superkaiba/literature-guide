@@ -73,6 +73,10 @@ published_date: YYYY-MM-DD
 document_type: preprint|published|blog_post|forum_post
 topics: ['mechanistic interpretability', ...]
 relevance_score: 0.0-1.0
+confidence: high|medium|low
+version_info: "v1 (first release)" or "v2 — revised YYYY-MM-DD, originally posted YYYY-MM-DD"
+code_available: true|false|unknown
+triage: "read in full"|"read abstract + key findings"|"awareness only"
 ---
 
 # Paper Title
@@ -81,12 +85,22 @@ relevance_score: 0.0-1.0
 3-5 sentences, no jargon, explain like talking to a smart friend.
 Start with "So what — why should anyone care?" framing.
 
+## Confidence & Provenance
+A structured assessment of how much to trust this paper:
+- **Confidence: HIGH/MEDIUM/LOW** — one-line rationale
+- **Author credibility:** Senior author's h-index, top prior papers, lab reputation
+- **Venue/status:** Peer-reviewed (where?), preprint, blog post, etc.
+- **Version:** First release, or revision? If revision, what changed? (web-search arXiv version history)
+- **Code/data:** Released? Link if available. "No code" is a yellow flag for empirical papers.
+- **Replication/discussion:** Has anyone independently validated, criticized, or extended this? (web-search)
+
+## Triage Recommendation
+One of: **Read in full** / **Read abstract + key findings** / **Awareness only**
+Brief justification (1 sentence): why this level of attention.
+
 ## About the Authors
 Web-searched: affiliations, notable prior work, h-index, citation counts.
-
-## Reliability Assessment
-HIGH/MEDIUM/LOW with rationale. Consider: author track record, institution,
-methodology rigor, peer review status, reproducibility.
+Flag if any author has a history of retracted or controversial work.
 
 ## Overview
 What this paper is and its context.
@@ -115,6 +129,12 @@ Why this matters for the field.
 ## Critical Assessment
 Your informed take on quality, significance, and caveats.
 
+## Community Reception
+What's the discussion like? (web-search Twitter/X, Reddit, LessWrong, blog responses)
+- Endorsements or criticism from notable researchers
+- Citation count if paper is older than a few days
+- If no discussion found yet, say so — that's also informative
+
 ## Key Terms
 - **Term**: Definition in context of this paper.
 
@@ -141,6 +161,10 @@ Brief description.
   "fetched_date": "YYYY-MM-DD",
   "topics": ["mechanistic interpretability"],
   "relevance_score": 0.85,
+  "confidence": "high",
+  "version": "v1",
+  "code_available": false,
+  "triage": "read in full",
   "summary_file": "papers/YYYY-MM-DD_slugified-title.md",
   "related_paper_ids": []
 }
@@ -156,7 +180,8 @@ Top 3-5 most important items with brief context on why they matter.
 ## Papers
 
 ### [Paper Title](URL)
-**Authors:** ... | **Source:** ... | **Relevance:** 0.XX
+**Authors:** ... | **Source:** ... | **Relevance:** 0.XX | **Confidence:** HIGH/MED/LOW | **Triage:** Read in full / Skim / Awareness
+**Published:** YYYY-MM-DD | **Version:** v1 or v2 (revised from ...) | **Code:** Yes/No
 > Plain language summary (2-3 sentences)
 
 **Key findings:**
