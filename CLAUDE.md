@@ -47,6 +47,52 @@ Dispatch multiple subagents to search these sources simultaneously. Today's date
 
 Each search subagent should return: title, authors, URL, source, and a 2-sentence summary of why it's interesting.
 
+### Step 1b: Personalized Picks — scan VM for current work and find related older papers
+
+Dispatch a subagent to:
+
+1. **Scan recently modified files on the VM** to infer what the user is currently working on:
+   ```bash
+   # Find files modified in last 3 days (excluding hidden dirs, caches, venvs)
+   find /home/thomasjiralerspong -maxdepth 4 -type f -mtime -3 \
+     -not -path '*/.*' -not -path '*/node_modules/*' \
+     -not -path '*/__pycache__/*' -not -path '*/venv/*' \
+     -not -path '*/.venv/*' -not -path '*/lit_review/*' 2>/dev/null | head -60
+
+   # Check recent git commits in all repos
+   for d in /home/thomasjiralerspong/*/; do
+     if [ -d "$d/.git" ]; then
+       echo "=== $d ===";
+       git -C "$d" log --oneline -10 2>/dev/null;
+     fi
+   done
+
+   # Read READMEs, CLAUDE.md, research logs in active repos
+   ```
+   Read the most recently modified .py, .ipynb, .tex, .md files to understand
+   the current research focus — what models, methods, datasets, and research
+   questions are being actively worked on.
+
+2. **Summarize the user's current work** in 3-5 sentences: what topic, what
+   specific experiments, what methods, what models.
+
+3. **Web-search for 3 older papers** (published 1-4 weeks ago, NOT from the
+   last 2-3 days) that are directly relevant to the user's current experiments.
+   These should be papers the user might have missed — not the obvious ones
+   they'd already know about. Search for:
+   - Papers using similar methods on similar problems
+   - Papers with findings that would inform the user's current experiments
+   - Papers from adjacent fields that have relevant techniques or results
+   
+   For each paper, return: title, authors, URL, date, and a 3-4 sentence
+   explanation of **why this specific paper matters for what the user is
+   currently doing** (not a generic summary — connect it to their active work).
+
+These 3 papers get added to the digest in a separate "Personalized Picks" section.
+They use the same deep analysis format as other papers but with an additional
+"**Connection to your current work:**" paragraph at the top explaining specifically
+how the paper relates to what you're doing right now on this VM.
+
 ### Step 2: Deduplicate and Rank
 
 From all search results, deduplicate by title similarity. Then select the top 10-20 papers using two criteria:
@@ -219,6 +265,24 @@ Top 3-5 most important items with brief context on why they matter.
 
 ---
 (repeat for each paper)
+
+## Personalized Picks
+Papers from 1-4 weeks ago related to what you're currently working on.
+
+### [Paper Title](URL)
+**Authors:** ... | **Source:** ... | **Published:** YYYY-MM-DD
+**Connection to your current work:** 2-3 sentences explaining specifically how this
+paper relates to the experiments/code you're actively running on this VM right now.
+
+> Plain language summary (2-3 sentences)
+
+**Key findings:**
+- ...
+
+**Why you should read this:** One sentence on what you'd get out of it.
+
+---
+(repeat for each personalized pick, typically 3 papers)
 
 ## Opportunities
 ### Jobs & Fellowships
