@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-04-08_understanding-reframing-automation-and-assurance",
+    "title": "Understanding: reframing automation and assurance",
+    "authors": [
+      "Robin Bloomfield"
+    ],
+    "url": "http://arxiv.org/abs/2604.05662v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_understanding-reframing-automation-and-assurance.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_synthetic-moral-agents-or-sophisticated-mimics",
+    "title": "Synthetic Moral Agents or Sophisticated Mimics?",
+    "authors": [
+      "Han Li"
+    ],
+    "url": "https://doi.org/10.17613/k13dm-vaq64",
+    "doi": "https://doi.org/10.17613/k13dm-vaq64",
+    "source": "openalex",
+    "published_date": "2026-06-30",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "language model personas"
+    ],
+    "relevance_score": 0.3,
+    "summary_file": "papers/2026-04-08_synthetic-moral-agents-or-sophisticated-mimics.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio",
+    "title": "APOLLO: an open platform for\u00a0LLM-based multi-agent interaction research",
+    "authors": [
+      "Abel Johny",
+      "Eike Schneiders",
+      "J\u00e9r\u00e9mie Clos"
+    ],
+    "url": "https://doi.org/10.1007/978-3-031-97177-8_10",
+    "doi": "https://doi.org/10.1007/978-3-031-97177-8_10",
+    "source": "openalex",
+    "published_date": "2026-07-17",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "language model personas"
+    ],
+    "relevance_score": 0.2,
+    "summary_file": "papers/2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio.md",
+    "related_paper_ids": []
+  },
+  {
     "id": "2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space",
     "title": "Disentangling MLP Neuron Weights in Vocabulary Space",
     "authors": [
@@ -16,7 +74,7 @@
       "mechanistic interpretability",
       "superposition features"
     ],
-    "relevance_score": 0.9,
+    "relevance_score": 0.85,
     "summary_file": "papers/2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space.md",
     "related_paper_ids": []
   },
@@ -76,33 +134,11 @@
     "topics": [
       "AI safety",
       "AI alignment",
+      "mechanistic interpretability",
       "emergent misalignment"
     ],
     "relevance_score": 0.65,
     "summary_file": "papers/2026-04-08_my-picture-of-the-present-in-ai.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_llm-reasoning-as-trajectories-step-specific-representation-g",
-    "title": "LLM Reasoning as Trajectories: Step-Specific Representation Geometry and Correctness Signals",
-    "authors": [
-      "Lihao Sun",
-      "Hang Dong",
-      "Bo Qiao",
-      "Qingwei Lin",
-      "Dongmei Zhang",
-      "Saravan Rajmohan"
-    ],
-    "url": "http://arxiv.org/abs/2604.05655v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "mechanistic interpretability"
-    ],
-    "relevance_score": 0.62,
-    "summary_file": "papers/2026-04-08_llm-reasoning-as-trajectories-step-specific-representation-g.md",
     "related_paper_ids": []
   },
   {
@@ -124,6 +160,29 @@
     ],
     "relevance_score": 0.55,
     "summary_file": "papers/2026-04-08_beyond-semantics-disentangling-information-scope-in-sparse-a.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_llm-reasoning-as-trajectories-step-specific-representation-g",
+    "title": "LLM Reasoning as Trajectories: Step-Specific Representation Geometry and Correctness Signals",
+    "authors": [
+      "Lihao Sun",
+      "Hang Dong",
+      "Bo Qiao",
+      "Qingwei Lin",
+      "Dongmei Zhang",
+      "Saravan Rajmohan"
+    ],
+    "url": "http://arxiv.org/abs/2604.05655v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_llm-reasoning-as-trajectories-step-specific-representation-g.md",
     "related_paper_ids": []
   },
   {
@@ -162,8 +221,8 @@
     "published_date": "2026-04-08",
     "fetched_date": "2026-04-08",
     "topics": [
-      "language model personas",
       "subliminal learning",
+      "language model personas",
       "mechanistic interpretability"
     ],
     "relevance_score": 0.55,
@@ -211,44 +270,6 @@
     "related_paper_ids": []
   },
   {
-    "id": "2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti",
-    "title": "Beyond Behavior: Why AI Evaluation Needs a Cognitive Revolution",
-    "authors": [
-      "Amir Konigsberg"
-    ],
-    "url": "http://arxiv.org/abs/2604.05631v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "mechanistic interpretability",
-      "AI alignment"
-    ],
-    "relevance_score": 0.45,
-    "summary_file": "papers/2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la",
-    "title": "A Risk\u2013Utility Optimization Framework for Governing Large Language Model Responses",
-    "authors": [
-      "Jinghao Chang"
-    ],
-    "url": "https://doi.org/10.17613/tzvgm-j2e56",
-    "doi": "https://doi.org/10.17613/tzvgm-j2e56",
-    "source": "openalex",
-    "published_date": "2026-06-30",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "AI safety",
-      "AI alignment"
-    ],
-    "relevance_score": 0.35,
-    "summary_file": "papers/2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la.md",
-    "related_paper_ids": []
-  },
-  {
     "id": "2026-04-08_context-value-action-architecture-for-value-driven-large-lan",
     "title": "Context-Value-Action Architecture for Value-Driven Large Language Model Agents",
     "authors": [
@@ -265,10 +286,10 @@
     "published_date": "2026-04-07",
     "fetched_date": "2026-04-08",
     "topics": [
-      "language model personas",
-      "AI alignment"
+      "AI alignment",
+      "language model personas"
     ],
-    "relevance_score": 0.35,
+    "relevance_score": 0.45,
     "summary_file": "papers/2026-04-08_context-value-action-architecture-for-value-driven-large-lan.md",
     "related_paper_ids": []
   },
@@ -286,29 +307,11 @@
     "published_date": "2026-04-07",
     "fetched_date": "2026-04-08",
     "topics": [
-      "language model personas"
-    ],
-    "relevance_score": 0.35,
-    "summary_file": "papers/2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll.md",
-    "related_paper_ids": []
-  },
-  {
-    "id": "2026-04-08_understanding-reframing-automation-and-assurance",
-    "title": "Understanding: reframing automation and assurance",
-    "authors": [
-      "Robin Bloomfield"
-    ],
-    "url": "http://arxiv.org/abs/2604.05662v1",
-    "doi": null,
-    "source": "arxiv",
-    "published_date": "2026-04-07",
-    "fetched_date": "2026-04-08",
-    "topics": [
-      "AI safety",
+      "language model personas",
       "AI alignment"
     ],
-    "relevance_score": 0.35,
-    "summary_file": "papers/2026-04-08_understanding-reframing-automation-and-assurance.md",
+    "relevance_score": 0.45,
+    "summary_file": "papers/2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll.md",
     "related_paper_ids": []
   },
   {
@@ -325,11 +328,70 @@
     "published_date": "2027-01-01",
     "fetched_date": "2026-04-08",
     "topics": [
-      "AI safety",
-      "language model personas"
+      "AI alignment",
+      "emergent misalignment"
+    ],
+    "relevance_score": 0.45,
+    "summary_file": "papers/2026-04-08_the-ethical-and-legal-complexities-of-regulating-companion-a.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_beyond-compromise-pareto-lenient-consensus-for-efficient-mul",
+    "title": "Beyond Compromise: Pareto-Lenient Consensus for Efficient Multi-Preference LLM Alignment",
+    "authors": [
+      "Renxuan Tan",
+      "Rongpeng Li",
+      "Zhifeng Zhao",
+      "Honggang Zhang"
+    ],
+    "url": "http://arxiv.org/abs/2604.05965v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "LLM training"
     ],
     "relevance_score": 0.35,
-    "summary_file": "papers/2026-04-08_the-ethical-and-legal-complexities-of-regulating-companion-a.md",
+    "summary_file": "papers/2026-04-08_beyond-compromise-pareto-lenient-consensus-for-efficient-mul.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti",
+    "title": "Beyond Behavior: Why AI Evaluation Needs a Cognitive Revolution",
+    "authors": [
+      "Amir Konigsberg"
+    ],
+    "url": "http://arxiv.org/abs/2604.05631v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_the-undo-flip-flop-a-controlled-probe-for-reversible-semanti",
+    "title": "The UNDO Flip-Flop: A Controlled Probe for Reversible Semantic State Management in State Space Model",
+    "authors": [
+      "Hongxu Zhou"
+    ],
+    "url": "http://arxiv.org/abs/2604.05923v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_the-undo-flip-flop-a-controlled-probe-for-reversible-semanti.md",
     "related_paper_ids": []
   },
   {
@@ -352,22 +414,26 @@
     "related_paper_ids": []
   },
   {
-    "id": "2026-04-08_synthetic-moral-agents-or-sophisticated-mimics",
-    "title": "Synthetic Moral Agents or Sophisticated Mimics?",
+    "id": "2026-04-08_exclusive-unlearning",
+    "title": "Exclusive Unlearning",
     "authors": [
-      "Han Li"
+      "Mutsumi Sasaki",
+      "Kouta Nakayama",
+      "Yusuke Miyao",
+      "Yohei Oseki",
+      "Masaru Isonuma"
     ],
-    "url": "https://doi.org/10.17613/k13dm-vaq64",
-    "doi": "https://doi.org/10.17613/k13dm-vaq64",
-    "source": "openalex",
-    "published_date": "2026-06-30",
+    "url": "http://arxiv.org/abs/2604.06154v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
     "fetched_date": "2026-04-08",
     "topics": [
-      "AI alignment",
-      "language model personas"
+      "AI safety",
+      "machine unlearning"
     ],
     "relevance_score": 0.3,
-    "summary_file": "papers/2026-04-08_synthetic-moral-agents-or-sophisticated-mimics.md",
+    "summary_file": "papers/2026-04-08_exclusive-unlearning.md",
     "related_paper_ids": []
   },
   {
@@ -389,23 +455,22 @@
     "related_paper_ids": []
   },
   {
-    "id": "2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio",
-    "title": "APOLLO: an open platform for\u00a0LLM-based multi-agent interaction research",
+    "id": "2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la",
+    "title": "A Risk\u2013Utility Optimization Framework for Governing Large Language Model Responses",
     "authors": [
-      "Abel Johny",
-      "Eike Schneiders",
-      "J\u00e9r\u00e9mie Clos"
+      "Jinghao Chang"
     ],
-    "url": "https://doi.org/10.1007/978-3-031-97177-8_10",
-    "doi": "https://doi.org/10.1007/978-3-031-97177-8_10",
+    "url": "https://doi.org/10.17613/tzvgm-j2e56",
+    "doi": "https://doi.org/10.17613/tzvgm-j2e56",
     "source": "openalex",
-    "published_date": "2026-07-17",
+    "published_date": "2026-06-30",
     "fetched_date": "2026-04-08",
     "topics": [
-      "language model personas"
+      "AI safety",
+      "AI alignment"
     ],
-    "relevance_score": 0.2,
-    "summary_file": "papers/2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio.md",
+    "relevance_score": 0.25,
+    "summary_file": "papers/2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la.md",
     "related_paper_ids": []
   }
 ]

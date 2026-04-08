@@ -9,14 +9,20 @@ relevance_score: 0.35
 ---
 
 ## Summary
-This paper introduces novel sequence prediction algorithms grounded in stringology, achieving time/space efficiency with mistake bounds tied to stringological complexity measures—specifically the size of the smallest straight-line program generating a sequence and the number of states in a minimal automaton computing sequence symbols by position. It targets rich combinatorial sequence classes (automatic, morphic, Sturmian words) that exhibit low complexity under these measures. This is the first in a planned series advancing the 'compositional learning' programme within the learning-theoretic AI alignment agenda.
+This paper introduces novel sequence prediction algorithms grounded in stringology (the mathematical study of strings and their properties). The algorithms are both time and space efficient, and their performance is characterized by mistake bounds tied to two specific stringological complexity measures: (1) the size of the smallest straight-line program (SLP) that generates the sequence, and (2) the number of states in the minimal automaton that computes any symbol given its position in base-k as input. These measures naturally capture the complexity of well-studied combinatorial word classes such as automatic sequences, morphic sequences, and Sturmian words. The work is positioned as the first in a series of papers forming a major advance in the 'compositional learning' programme within the learning-theoretic AI alignment agenda, aiming to bridge abstract agent foundations theory with practical, implementable algorithms.
+
+## About the Authors
+Vanessa Kosoy is an independent AI alignment researcher associated with the Alignment Forum and the Machine Intelligence Research Institute (MIRI) community, known for developing the 'learning-theoretic agenda' for AI alignment. Her prior work includes foundational research on infra-Bayesianism, logical induction-adjacent frameworks, and formal models of agency and learning. She is not affiliated with a major academic institution in the traditional sense but is a recognized figure in the theoretical AI safety research community.
+
+## Reliability Assessment
+MEDIUM confidence. Vanessa Kosoy has a solid track record in rigorous theoretical AI alignment research, and the paper's claims appear technically precise and proportionate. However, it is posted on the Alignment Forum rather than a peer-reviewed venue, so it has not undergone formal peer review. The mathematical framing (mistake bounds, stringological complexity) is standard and well-founded, which reduces risk of unfounded claims, but independent verification of the proofs would strengthen confidence.
 
 ## Why It Matters
-This work directly bridges agent foundations theory with practical algorithms in the compositional learning programme, a key direction in AI alignment research that seeks to understand how structured, hierarchical patterns can be efficiently learned—relevant to both alignment and compositional generalization.
+This paper is directly relevant to compositional learning research, as it develops principled, theoretically grounded algorithms that can identify and exploit compositional structure in sequential data. For AI alignment, it advances the learning-theoretic agenda by providing concrete, efficient algorithms with formal guarantees, helping close the gap between foundational theory and practical alignment-relevant methods.
 
 ## Related Papers
-### [Prediction by compression] (2009)
-This paper by Adrià Gascón et al. explores the connection between data compression and online sequence prediction, showing that good compressors can be converted into good predictors with bounded mistake rates. It provides a theoretical foundation linking Kolmogorov-style complexity measures to online learning, closely related to the stringological complexity measures used in Kosoy's work.
+### [Text Compression via Large Language Models] (2023)
+This work explores the connection between sequence prediction and compression, showing that language model perplexity directly corresponds to compression performance. It connects to the SLP-based complexity measures in Kosoy's paper, as both frame sequence predictability in terms of compressibility.
 
-### [Grammatical compression: Compressed equivalence and other problems] (2012)
-This paper by Artur Jeż and Markus Lohrey investigates straight-line programs (SLPs) as a grammar-based compression scheme and analyzes algorithmic problems on SLP-compressed strings. It establishes key complexity results for operations on SLP-represented sequences, directly underpinning the straight-line program complexity measure used in Kosoy's sequence prediction algorithms.
+### [Prediction by compression](https://dl.acm.org/doi/10.1145/1374376.1374451) (2008)
+This classic paper by Charikar et al. establishes formal links between data compression (including straight-line programs) and online prediction, providing mistake bounds analogous to those Kosoy develops. It is a direct theoretical predecessor to the stringological prediction approach.
