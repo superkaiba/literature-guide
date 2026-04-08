@@ -1,1 +1,411 @@
-[]
+[
+  {
+    "id": "2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space",
+    "title": "Disentangling MLP Neuron Weights in Vocabulary Space",
+    "authors": [
+      "Asaf Avrahamy",
+      "Yoav Gur-Arieh",
+      "Mor Geva"
+    ],
+    "url": "http://arxiv.org/abs/2604.06005v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "superposition features"
+    ],
+    "relevance_score": 0.9,
+    "summary_file": "papers/2026-04-08_disentangling-mlp-neuron-weights-in-vocabulary-space.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_mechanistic-circuit-based-knowledge-editing-in-large-languag",
+    "title": "Mechanistic Circuit-Based Knowledge Editing in Large Language Models",
+    "authors": [
+      "Tianyi Zhao",
+      "Yinhan He",
+      "Wendy Zheng",
+      "Chen Chen"
+    ],
+    "url": "http://arxiv.org/abs/2604.05876v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety"
+    ],
+    "relevance_score": 0.75,
+    "summary_file": "papers/2026-04-08_mechanistic-circuit-based-knowledge-editing-in-large-languag.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_how-llms-follow-instructions-skillful-coordination-not-a-uni",
+    "title": "How LLMs Follow Instructions: Skillful Coordination, Not a Universal Mechanism",
+    "authors": [
+      "Elisabetta Rocchetti",
+      "Alfio Ferrara"
+    ],
+    "url": "http://arxiv.org/abs/2604.06015v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "language model personas"
+    ],
+    "relevance_score": 0.72,
+    "summary_file": "papers/2026-04-08_how-llms-follow-instructions-skillful-coordination-not-a-uni.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_my-picture-of-the-present-in-ai",
+    "title": "My picture of the present in AI",
+    "authors": [
+      "ryan_greenblatt"
+    ],
+    "url": "https://www.alignmentforum.org/posts/WjaGAA4xCAXeFpyWm/my-picture-of-the-present-in-ai",
+    "doi": null,
+    "source": "alignment_forum",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment",
+      "emergent misalignment"
+    ],
+    "relevance_score": 0.65,
+    "summary_file": "papers/2026-04-08_my-picture-of-the-present-in-ai.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_llm-reasoning-as-trajectories-step-specific-representation-g",
+    "title": "LLM Reasoning as Trajectories: Step-Specific Representation Geometry and Correctness Signals",
+    "authors": [
+      "Lihao Sun",
+      "Hang Dong",
+      "Bo Qiao",
+      "Qingwei Lin",
+      "Dongmei Zhang",
+      "Saravan Rajmohan"
+    ],
+    "url": "http://arxiv.org/abs/2604.05655v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.62,
+    "summary_file": "papers/2026-04-08_llm-reasoning-as-trajectories-step-specific-representation-g.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_beyond-semantics-disentangling-information-scope-in-sparse-a",
+    "title": "Beyond Semantics: Disentangling Information Scope in Sparse Autoencoders for CLIP",
+    "authors": [
+      "Yusung Ro",
+      "Jaehyun Choi",
+      "Junmo Kim"
+    ],
+    "url": "http://arxiv.org/abs/2604.05724v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "superposition features"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_beyond-semantics-disentangling-information-scope-in-sparse-a.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_the-model-agreed-but-didn-t-learn-diagnosing-surface-complia",
+    "title": "The Model Agreed, But Didn't Learn: Diagnosing Surface Compliance in Large Language Models",
+    "authors": [
+      "Xiaojie Gu",
+      "Ziying Huang",
+      "Weicong Hong",
+      "Jian Xie",
+      "Renze Lou",
+      "Kai Zhang"
+    ],
+    "url": "http://arxiv.org/abs/2604.05995v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_the-model-agreed-but-didn-t-learn-diagnosing-surface-complia.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_my-unsupervised-elicitation-challenge",
+    "title": "My unsupervised elicitation challenge",
+    "authors": [
+      "DanielFilan"
+    ],
+    "url": "https://www.alignmentforum.org/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge",
+    "doi": null,
+    "source": "alignment_forum",
+    "published_date": "2026-04-08",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "language model personas",
+      "subliminal learning",
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_my-unsupervised-elicitation-challenge.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_how-does-an-agent-with-multiple-goals-choose-a-target",
+    "title": "How Does an Agent with Multiple Goals Choose a Target?",
+    "authors": [
+      "sturb"
+    ],
+    "url": "https://www.lesswrong.com/posts/XWmqSTX89rgqeqyfv/how-does-an-agent-with-multiple-goals-choose-a-target",
+    "doi": null,
+    "source": "lesswrong",
+    "published_date": "2026-04-08",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety"
+    ],
+    "relevance_score": 0.55,
+    "summary_file": "papers/2026-04-08_how-does-an-agent-with-multiple-goals-choose-a-target.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_lag-xai-a-lie-inspired-affine-geometric-framework-for-interp",
+    "title": "LAG-XAI: A Lie-Inspired Affine Geometric Framework for Interpretable Paraphrasing in Transformer Latent Spaces",
+    "authors": [
+      "Olexander Mazurets",
+      "Olexander Barmak",
+      "Leonid Bedratyuk",
+      "Iurii Krak"
+    ],
+    "url": "http://arxiv.org/abs/2604.06086v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability"
+    ],
+    "relevance_score": 0.45,
+    "summary_file": "papers/2026-04-08_lag-xai-a-lie-inspired-affine-geometric-framework-for-interp.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti",
+    "title": "Beyond Behavior: Why AI Evaluation Needs a Cognitive Revolution",
+    "authors": [
+      "Amir Konigsberg"
+    ],
+    "url": "http://arxiv.org/abs/2604.05631v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI alignment"
+    ],
+    "relevance_score": 0.45,
+    "summary_file": "papers/2026-04-08_beyond-behavior-why-ai-evaluation-needs-a-cognitive-revoluti.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la",
+    "title": "A Risk\u2013Utility Optimization Framework for Governing Large Language Model Responses",
+    "authors": [
+      "Jinghao Chang"
+    ],
+    "url": "https://doi.org/10.17613/tzvgm-j2e56",
+    "doi": "https://doi.org/10.17613/tzvgm-j2e56",
+    "source": "openalex",
+    "published_date": "2026-06-30",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_a-risk-utility-optimization-framework-for-governing-large-la.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_context-value-action-architecture-for-value-driven-large-lan",
+    "title": "Context-Value-Action Architecture for Value-Driven Large Language Model Agents",
+    "authors": [
+      "TianZe Zhang",
+      "Sirui Sun",
+      "Yuhang Xie",
+      "Xin Zhang",
+      "Zhiqiang Wu",
+      "Guojie Song"
+    ],
+    "url": "http://arxiv.org/abs/2604.05939v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "language model personas",
+      "AI alignment"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_context-value-action-architecture-for-value-driven-large-lan.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll",
+    "title": "Stories of Your Life as Others: A Round-Trip Evaluation of LLM-Generated Life Stories Conditioned on Rich Psychometric Profiles",
+    "authors": [
+      "Ben Wigler",
+      "Maria Tsfasman",
+      "Tiffany Matej Hrkalovic"
+    ],
+    "url": "http://arxiv.org/abs/2604.06071v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "language model personas"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_stories-of-your-life-as-others-a-round-trip-evaluation-of-ll.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_understanding-reframing-automation-and-assurance",
+    "title": "Understanding: reframing automation and assurance",
+    "authors": [
+      "Robin Bloomfield"
+    ],
+    "url": "http://arxiv.org/abs/2604.05662v1",
+    "doi": null,
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "AI alignment"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_understanding-reframing-automation-and-assurance.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_the-ethical-and-legal-complexities-of-regulating-companion-a",
+    "title": "The Ethical and Legal Complexities of Regulating Companion AI Chatbots",
+    "authors": [
+      "Sue Anne Teo",
+      "S. P. Mann",
+      "Paul Jurcys"
+    ],
+    "url": "https://openalex.org/W7143585285",
+    "doi": null,
+    "source": "openalex",
+    "published_date": "2027-01-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety",
+      "language model personas"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_the-ethical-and-legal-complexities-of-regulating-companion-a.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_paper-stringological-sequence-prediction-i",
+    "title": "[Paper] Stringological sequence prediction I",
+    "authors": [
+      "Vanessa Kosoy"
+    ],
+    "url": "https://www.alignmentforum.org/posts/EEvHYKLsq92LmQ78a/paper-stringological-sequence-prediction-i-1",
+    "doi": null,
+    "source": "alignment_forum",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "compositional learning"
+    ],
+    "relevance_score": 0.35,
+    "summary_file": "papers/2026-04-08_paper-stringological-sequence-prediction-i.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_synthetic-moral-agents-or-sophisticated-mimics",
+    "title": "Synthetic Moral Agents or Sophisticated Mimics?",
+    "authors": [
+      "Han Li"
+    ],
+    "url": "https://doi.org/10.17613/k13dm-vaq64",
+    "doi": "https://doi.org/10.17613/k13dm-vaq64",
+    "source": "openalex",
+    "published_date": "2026-06-30",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI alignment",
+      "language model personas"
+    ],
+    "relevance_score": 0.3,
+    "summary_file": "papers/2026-04-08_synthetic-moral-agents-or-sophisticated-mimics.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_ai-as-a-trojan-horse-race",
+    "title": "AI as a Trojan horse race",
+    "authors": [
+      "KatjaGrace"
+    ],
+    "url": "https://www.lesswrong.com/posts/z3xbNMk9R2fP3aqYf/ai-as-a-trojan-horse-race",
+    "doi": null,
+    "source": "lesswrong",
+    "published_date": "2026-04-08",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "AI safety"
+    ],
+    "relevance_score": 0.3,
+    "summary_file": "papers/2026-04-08_ai-as-a-trojan-horse-race.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio",
+    "title": "APOLLO: an open platform for\u00a0LLM-based multi-agent interaction research",
+    "authors": [
+      "Abel Johny",
+      "Eike Schneiders",
+      "J\u00e9r\u00e9mie Clos"
+    ],
+    "url": "https://doi.org/10.1007/978-3-031-97177-8_10",
+    "doi": "https://doi.org/10.1007/978-3-031-97177-8_10",
+    "source": "openalex",
+    "published_date": "2026-07-17",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "language model personas"
+    ],
+    "relevance_score": 0.2,
+    "summary_file": "papers/2026-04-08_apollo-an-open-platform-for-llm-based-multi-agent-interactio.md",
+    "related_paper_ids": []
+  }
+]
