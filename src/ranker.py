@@ -1,8 +1,13 @@
 from __future__ import annotations
 
 import json
+import logging
 
 import anthropic
+
+from src.json_utils import extract_json
+
+log = logging.getLogger(__name__)
 
 from src.models import RawPaper
 
@@ -58,10 +63,15 @@ def rank_papers(
                 }
             ],
         )
-        scores = json.loads(response.content[0].text)
+        try:
+            raw_text = response.content[0].text
+            scores = json.loads(extract_json(raw_text))
+        except (json.JSONDecodeError, IndexError) as e:
+            log.warning("Failed to parse ranker response: %s", e)
+            continue
         for item in scores:
-            idx = item["index"]
-            if idx < len(batch):
+            idx = item.get("index", -1)
+            if 0 <= idx < len(batch):
                 all_scored.append((batch[idx], item["score"], item.get("topics", [])))
 
     all_scored.sort(key=lambda x: x[1], reverse=True)

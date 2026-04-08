@@ -5,6 +5,7 @@ from datetime import date
 
 import anthropic
 
+from src.json_utils import extract_json
 from src.models import RawPaper, SummarizedPaper, RelatedPaper, make_paper_id
 
 SUMMARIZE_PROMPT = """You are a research assistant for an ML researcher focused on: {topics}.
@@ -61,7 +62,7 @@ def summarize_paper(
         ],
     )
 
-    data = json.loads(response.content[0].text)
+    data = json.loads(extract_json(response.content[0].text))
 
     related = [
         RelatedPaper(
