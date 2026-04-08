@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 
 import anthropic
 
@@ -51,18 +52,27 @@ def rank_papers(
             f"[{i}] Title: {p.title}\nAbstract: {p.abstract[:500]}"
             for i, p in enumerate(batch)
         )
-        response = client.messages.create(
-            model=model,
-            max_tokens=2048,
-            messages=[
-                {
-                    "role": "user",
-                    "content": RANK_PROMPT.format(
-                        topics=", ".join(topics), papers=batch_text
-                    ),
-                }
-            ],
-        )
+        for attempt in range(3):
+            try:
+                response = client.messages.create(
+                    model=model,
+                    max_tokens=2048,
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": RANK_PROMPT.format(
+                                topics=", ".join(topics), papers=batch_text
+                            ),
+                        }
+                    ],
+                )
+                break
+            except anthropic.APIStatusError as e:
+                if e.status_code in (429, 529) and attempt < 2:
+                    log.warning("API overloaded/rate-limited, retrying in %ds...", 2 ** attempt * 5)
+                    time.sleep(2 ** attempt * 5)
+                else:
+                    raise
         try:
             raw_text = response.content[0].text
             scores = json.loads(extract_json(raw_text))

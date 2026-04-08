@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 from datetime import date
 
 import anthropic
@@ -87,32 +88,41 @@ def summarize_paper(
     client = anthropic.Anthropic(api_key=api_key)
     today = date.today().isoformat()
 
-    response = client.messages.create(
-        model=model,
-        max_tokens=16000,
-        thinking={
-            "type": "enabled",
-            "budget_tokens": 10000,
-        },
-        tools=[
-            {
-                "name": "web_search",
-                "type": "web_search_20250305",
-            }
-        ],
-        messages=[
-            {
-                "role": "user",
-                "content": SUMMARIZE_PROMPT.format(
-                    topics=", ".join(topics),
-                    title=paper.title,
-                    authors=", ".join(paper.authors),
-                    abstract=paper.abstract[:2000],
-                    source=paper.source,
-                ),
-            }
-        ],
-    )
+    for attempt in range(3):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=16000,
+                thinking={
+                    "type": "enabled",
+                    "budget_tokens": 10000,
+                },
+                tools=[
+                    {
+                        "name": "web_search",
+                        "type": "web_search_20250305",
+                    }
+                ],
+                messages=[
+                    {
+                        "role": "user",
+                        "content": SUMMARIZE_PROMPT.format(
+                            topics=", ".join(topics),
+                            title=paper.title,
+                            authors=", ".join(paper.authors),
+                            abstract=paper.abstract[:2000],
+                            source=paper.source,
+                        ),
+                    }
+                ],
+            )
+            break
+        except anthropic.APIStatusError as e:
+            if e.status_code in (429, 529) and attempt < 2:
+                log.warning("API overloaded/rate-limited for '%s', retrying in %ds...", paper.title, 2 ** attempt * 5)
+                time.sleep(2 ** attempt * 5)
+            else:
+                raise
 
     raw_text = _extract_text_from_response(response)
     if not raw_text:
