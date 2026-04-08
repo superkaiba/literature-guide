@@ -11,6 +11,7 @@ def _sample_paper():
         published_date="2026-04-06", fetched_date="2026-04-07",
         topics=["mechanistic interpretability"], relevance_score=0.95,
         document_type="research paper",
+        plain_language_summary="This paper figures out how to peek inside AI brains.",
         overview="A paper about mechanistic interpretability.",
         main_goal="Understand model internals.",
         key_findings=["Features are interpretable", "SAEs work well"],

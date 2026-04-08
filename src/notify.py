@@ -38,6 +38,13 @@ def _format_email_html(
         if p.author_info:
             lines.append(f"<p style='color: #555; font-style: italic;'>{p.author_info}</p>")
 
+        # Plain language summary (first, prominent)
+        if p.plain_language_summary:
+            lines.append(
+                f"<p style='background: #eef6ff; padding: 10px; border-radius: 6px; font-size: 1.05em;'>"
+                f"{p.plain_language_summary}</p>"
+            )
+
         # Reliability badge
         if p.reliability_assessment:
             color = "#16a34a" if "HIGH" in p.reliability_assessment else "#d97706" if "MEDIUM" in p.reliability_assessment else "#dc2626"
@@ -131,6 +138,8 @@ def _format_email_plain(
         lines.append(f"   Authors: {', '.join(p.authors)}")
         lines.append(f"   Source: {source_label} | Date: {p.published_date} | Type: {p.document_type}")
         lines.append(f"   URL: {p.url}")
+        if p.plain_language_summary:
+            lines.append(f"   >>> {p.plain_language_summary}")
         if p.author_info:
             lines.append(f"   Authors: {p.author_info}")
         if p.reliability_assessment:

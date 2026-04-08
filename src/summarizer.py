@@ -36,6 +36,7 @@ Source: {source}
 
 {{
     "document_type": "research paper | blog post | review | commentary | preprint",
+    "plain_language_summary": "3-5 sentences explaining what this paper does and why it matters as if talking to a smart friend who isn't a specialist. No jargon, no acronyms. Use analogies and intuitions. Start with the 'so what' — why should anyone care? Then explain the key idea and result in everyday terms.",
     "overview": "2-3 sentences: What type of document is this? What is the central question or problem being addressed?",
     "main_goal": "State the primary objective/hypothesis in plain language. What are the authors trying to show or build?",
     "key_findings": [
@@ -165,6 +166,7 @@ def summarize_paper(
         topics=topics,
         relevance_score=score,
         document_type=data.get("document_type", ""),
+        plain_language_summary=data.get("plain_language_summary", ""),
         overview=data.get("overview", ""),
         main_goal=data.get("main_goal", ""),
         key_findings=data.get("key_findings", []),

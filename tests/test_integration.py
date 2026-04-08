@@ -58,6 +58,7 @@ def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_r
     text_block.type = "text"
     text_block.text = json.dumps({
         "document_type": "research paper",
+        "plain_language_summary": "This paper shows you can peek inside large AI models to understand their thinking.",
         "overview": "This paper studies SAEs for interpretability.",
         "main_goal": "Scale SAEs to large models.",
         "key_findings": ["SAE features are interpretable at scale"],

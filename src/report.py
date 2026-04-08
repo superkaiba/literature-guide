@@ -22,7 +22,8 @@ def generate_report(
     # Highlights
     lines.append("## Highlights")
     for p in papers[:5]:
-        lines.append(f"> **[{p.title}]({p.url})** — {p.overview.split('.')[0]}.")
+        teaser = p.plain_language_summary.split('.')[0] if p.plain_language_summary else p.overview.split('.')[0]
+        lines.append(f"> **[{p.title}]({p.url})** — {teaser}.")
     lines.append("")
 
     # Papers
@@ -39,6 +40,11 @@ def generate_report(
             f"**Relevance:** {p.relevance_score:.0%}"
         )
         lines.append("")
+
+        # Plain language summary (first!)
+        if p.plain_language_summary:
+            lines.append(f"**In plain English:** {p.plain_language_summary}")
+            lines.append("")
 
         # Author info
         if p.author_info:

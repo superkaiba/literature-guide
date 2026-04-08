@@ -23,6 +23,9 @@ def _paper_to_markdown(paper: SummarizedPaper) -> str:
         "",
     ]
 
+    if paper.plain_language_summary:
+        lines.extend(["## In Plain English", paper.plain_language_summary, ""])
+
     if paper.overview:
         lines.extend(["## Overview", paper.overview, ""])
 

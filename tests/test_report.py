@@ -10,6 +10,7 @@ def _sample_paper(title="Test Paper", score=0.9):
         doi=None, source="arxiv", published_date="2026-04-06",
         fetched_date="2026-04-07", topics=["safety"], relevance_score=score,
         document_type="research paper",
+        plain_language_summary="This paper tests whether AI systems can be tricked into doing bad things.",
         overview="A paper studying safety properties in language models.",
         main_goal="Evaluate safety of LLMs.",
         key_findings=["Models can be jailbroken", "Defenses help"],

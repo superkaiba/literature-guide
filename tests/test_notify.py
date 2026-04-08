@@ -10,6 +10,7 @@ def _sample_paper(title="Test Paper"):
         published_date="2026-04-06", fetched_date="2026-04-07",
         topics=["safety"], relevance_score=0.9,
         document_type="research paper",
+        plain_language_summary="This paper figures out how to peek inside AI brains to understand what they're thinking.",
         overview="This is a research paper about safety.",
         main_goal="Study safety properties.",
         key_findings=["Finding 1", "Finding 2"],

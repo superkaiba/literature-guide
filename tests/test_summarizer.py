@@ -5,6 +5,7 @@ from src.models import RawPaper, SummarizedPaper
 
 MOCK_RESPONSE_JSON = """{
     "document_type": "research paper",
+    "plain_language_summary": "Imagine you could look inside an AI's brain and label every thought it has. This paper shows that a technique called sparse autoencoders can do exactly that, and it still works even for the largest AI models. This matters because understanding what AI systems are actually thinking is crucial for making them safe.",
     "overview": "This is a research paper that studies sparse autoencoders for extracting interpretable features from language models. It addresses the challenge of scaling interpretability methods.",
     "main_goal": "Scale sparse autoencoders to GPT-4 class models and evaluate whether feature decomposition remains consistent.",
     "key_findings": [
@@ -63,6 +64,7 @@ def test_summarize_paper_returns_summarized(mock_anthropic_cls):
     )
     assert isinstance(result, SummarizedPaper)
     assert result.document_type == "research paper"
+    assert "brain" in result.plain_language_summary
     assert "sparse autoencoders" in result.overview
     assert len(result.key_findings) == 3
     assert result.methodology

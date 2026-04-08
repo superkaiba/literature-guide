@@ -46,6 +46,7 @@ class SummarizedPaper:
     relevance_score: float
     # Core analysis
     document_type: str  # "research paper", "blog post", "review", etc.
+    plain_language_summary: str  # jargon-free intuitive summary
     overview: str  # 2-3 sentence overview
     main_goal: str  # primary objective in plain language
     key_findings: list[str]  # 3-5 most important results/claims
