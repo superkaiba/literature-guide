@@ -468,5 +468,370 @@
     "relevance_score": 0.35,
     "summary_file": "papers/2026-04-08_my-picture-of-the-present-in-ai.md",
     "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_understanding-educators-perceptions-of-ai-generated-non-cons",
+    "title": "Understanding Educators' Perceptions of AI-generated Non-consensual Intimate Imagery",
+    "authors": [
+      "Tongxin Li",
+      "Katelyn M Reyes",
+      "Liezeil Jimenez",
+      "Katie S Nam",
+      "Donghee Yvette Wohn"
+    ],
+    "url": "http://arxiv.org/abs/2604.06131v1",
+    "doi": "10.1145/3772318.3790584",
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_understanding-educators-perceptions-of-ai-generated-non-cons.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_reciprocal-trust-and-distrust-in-artificial-intelligence-sys",
+    "title": "Reciprocal Trust and Distrust in Artificial Intelligence Systems: The Hard Problem of Regulation",
+    "authors": [
+      "Martino Maggetti"
+    ],
+    "url": "http://arxiv.org/abs/2604.05826v1",
+    "doi": "10.1007/s00146-026-02966-2",
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_reciprocal-trust-and-distrust-in-artificial-intelligence-sys.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_brain-to-speech-prosody-feature-engineering-and-transformer-",
+    "title": "Brain-to-Speech: Prosody Feature Engineering and Transformer-Based Reconstruction",
+    "authors": [
+      "Mohammed Salah Al-Radhi",
+      "G\u00e9za N\u00e9meth",
+      "Andon Tchechmedjiev",
+      "Binbin Xu"
+    ],
+    "url": "http://arxiv.org/abs/2604.05751v1",
+    "doi": "10.1007/978-3-032-10561-5_16",
+    "source": "arxiv",
+    "published_date": "2026-04-07",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_brain-to-speech-prosody-feature-engineering-and-transformer-.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_universal-direct-torque-controller-for-permanent-magnet-sync",
+    "title": "Universal Direct Torque Controller for Permanent Magnet Synchronous Motors via Meta-Reinforcement Learning",
+    "authors": [
+      "Darius Jakobeit",
+      "Maximilian Schenke",
+      "Oliver Wallscheid"
+    ],
+    "url": "https://www.semanticscholar.org/paper/ab94e18f0504585f24a8627d4be857f68bdc65f8",
+    "doi": "10.1109/TPEL.2025.3635741",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_universal-direct-torque-controller-for-permanent-magnet-sync.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_the-human-limitations-of-flipped-science-instruction-explori",
+    "title": "The Human Limitations of Flipped Science Instruction: Exploring Students Learning and Perceptions of Flipped Teaching",
+    "authors": [
+      "Lynne M. Zummo",
+      "B. Brown"
+    ],
+    "url": "https://www.semanticscholar.org/paper/ba2cb7aa3c75462b7b6e6d99c5a45242240ffb9f",
+    "doi": "10.71410/esapub.itej.2020.1",
+    "source": "semantic_scholar",
+    "published_date": "2026-06-30",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_the-human-limitations-of-flipped-science-instruction-explori.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_seizing-critical-learning-period-in-uav-assisted-hierarchica",
+    "title": "Seizing Critical Learning Period in UAV-Assisted Hierarchical Personalized Federated Learning",
+    "authors": [
+      "Yanlu Li",
+      "Yiming Liu",
+      "Yu-zhen Huang",
+      "Zhi Zhang"
+    ],
+    "url": "https://www.semanticscholar.org/paper/8e5eed3c69bfa269064f07a9f61b4e7f3822d0ff",
+    "doi": "10.1109/TMC.2025.3639671",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_seizing-critical-learning-period-in-uav-assisted-hierarchica.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_completion-time-minimization-for-uav-assisted-semi-decentral",
+    "title": "Completion Time Minimization for UAV-Assisted Semi-Decentralized Hybrid Federated Learning",
+    "authors": [
+      "Kui Chen",
+      "Jing Zhang",
+      "Yong Xiao",
+      "Minho Jo",
+      "Derrick Wing Kwan Ng"
+    ],
+    "url": "https://www.semanticscholar.org/paper/a36c4cc380fe9f0b9501355e9cd0abd9a1849997",
+    "doi": "10.1109/tmc.2025.3634664",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_completion-time-minimization-for-uav-assisted-semi-decentral.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_highly-biased-dna-sequence-reconstruction-in-dna-storage-wit",
+    "title": "Highly biased DNA sequence reconstruction in DNA storage with multi-scale attention mechanism and contrast learning.",
+    "authors": [
+      "Xue Li",
+      "Yanfen Zheng",
+      "Qi Shao",
+      "Jiadong Wang",
+      "Wei Li",
+      "Bin Wang",
+      "Shihua Zhou",
+      "Ben Cao",
+      "Pan Zheng"
+    ],
+    "url": "https://www.semanticscholar.org/paper/d3e0bbf448ae584e629471ad5755298e91175564",
+    "doi": "10.1016/j.synbio.2026.01.028",
+    "source": "semantic_scholar",
+    "published_date": "2026-06-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_highly-biased-dna-sequence-reconstruction-in-dna-storage-wit.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_efficient-and-resilient-packet-recovery-for-federated-learni",
+    "title": "Efficient and Resilient Packet Recovery for Federated Learning via Approximation",
+    "authors": [
+      "Jungmin Kwon",
+      "Hyunggon Park"
+    ],
+    "url": "https://www.semanticscholar.org/paper/5e36a39987c3483b87740b81ceeda4bd918a36c9",
+    "doi": "10.1109/TMC.2025.3636594",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_efficient-and-resilient-packet-recovery-for-federated-learni.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_efficient-mobile-cloud-collaborative-aggregation-for-federat",
+    "title": "Efficient Mobile-Cloud Collaborative Aggregation for Federated Learning With Latency Resilience",
+    "authors": [
+      "Wei Tang",
+      "Jiliang Li",
+      "Xiaojun Zhang",
+      "Yinbin Miao",
+      "Zhou Su",
+      "Robert H. Deng"
+    ],
+    "url": "https://www.semanticscholar.org/paper/2f9e74a388ea3cd7cea0e25ec0955e40cf7c81dd",
+    "doi": "10.1109/TMC.2025.3642433",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_efficient-mobile-cloud-collaborative-aggregation-for-federat.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_multi-space-crowd-sensing-task-allocation-a-dynamic-co-optim",
+    "title": "Multi-Space Crowd Sensing Task Allocation: A Dynamic Co-Optimization Framework With Fairness-Aware Reinforcement Learning",
+    "authors": [
+      "Yingjie Wang",
+      "Dihong Luo",
+      "Haojun Teng",
+      "Peiyong Duan",
+      "Yang Gao",
+      "Haijing Zhang",
+      "Zhipeng Cai"
+    ],
+    "url": "https://www.semanticscholar.org/paper/b9f80200d411c14c28f3686b4797fa3941be2ffa",
+    "doi": "10.1109/TMC.2025.3640127",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_multi-space-crowd-sensing-task-allocation-a-dynamic-co-optim.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_confshield-a-dual-stage-fusion-framework-for-robust-and-priv",
+    "title": "ConfShield: A dual-stage fusion framework for robust and privacy-enhancing federated learning in cloud environments",
+    "authors": [
+      "Yihao Cao",
+      "Jianbiao Zhang",
+      "Yaru Zhao",
+      "Detian Liu",
+      "Yufei Han",
+      "Weiwei Jiang",
+      "Tao Ye"
+    ],
+    "url": "https://www.semanticscholar.org/paper/71679b09f6fc8c7c1936abf51062892eb805227d",
+    "doi": "10.1016/j.inffus.2025.104037",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_confshield-a-dual-stage-fusion-framework-for-robust-and-priv.md",
+    "related_paper_ids": []
+  },
+  {
+    "id": "2026-04-08_a-survey-on-deep-learning-enabled-automatic-modulation-class",
+    "title": "A survey on deep learning enabled automatic modulation classification methods: Data representations, model structures, and regularization techniques",
+    "authors": [
+      "Xinyu Tian",
+      "Qinghe Zheng",
+      "Binglin Li",
+      "Dali Qiao",
+      "Kan Yu",
+      "Zhiqing Wei",
+      "Bin Li",
+      "Haozhun Jiang",
+      "Xingwang Li",
+      "Yun Lin",
+      "Guan Gui"
+    ],
+    "url": "https://www.semanticscholar.org/paper/14f6e166a14571302828fbc97e2c03e4f79a3baa",
+    "doi": "10.1016/j.sigpro.2025.110444",
+    "source": "semantic_scholar",
+    "published_date": "2026-05-01",
+    "fetched_date": "2026-04-08",
+    "topics": [
+      "mechanistic interpretability",
+      "AI safety",
+      "AI alignment",
+      "language model personas",
+      "emergent misalignment",
+      "subliminal learning",
+      "superposition features"
+    ],
+    "relevance_score": 0.5,
+    "summary_file": "papers/2026-04-08_a-survey-on-deep-learning-enabled-automatic-modulation-class.md",
+    "related_paper_ids": []
   }
 ]
