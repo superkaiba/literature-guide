@@ -17,6 +17,8 @@ def _sample_paper(title="Test Paper", score=0.9):
         relevance_score=score,
         summary="Summary of the paper.",
         why_it_matters="Important for safety.",
+        author_info="Alice is a researcher at Anthropic.",
+        reliability_assessment="HIGH confidence. Published by leading lab.",
         related_papers=[
             RelatedPaper(
                 title="Old Paper",

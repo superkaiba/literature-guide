@@ -57,6 +57,8 @@ def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_r
     summarizer_response.content[0].text = json.dumps({
         "summary": "This paper studies SAEs for interpretability.",
         "why_it_matters": "Advances mechanistic interpretability.",
+        "author_info": "Test Author is a researcher at Anthropic.",
+        "reliability_assessment": "HIGH confidence. Published by established researchers.",
         "related_papers": [{"title": "Toy Models of Superposition", "url": "https://arxiv.org/abs/2209.10652", "year": 2022, "summary": "Foundational work on superposition."}]
     })
     summarizer_client.messages.create.return_value = summarizer_response

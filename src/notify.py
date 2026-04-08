@@ -15,36 +15,57 @@ def _format_email_html(
 ) -> str:
     today = date.today().isoformat()
     lines = [
+        "<html><body>",
         f"<h2>Literature Guide &mdash; {today}</h2>",
+        f"<p>{len(papers)} papers curated today. "
+        f'<a href="{report_url}">Full report on GitHub</a></p>',
+        "<hr>",
     ]
 
-    if papers:
-        lines.append("<h3>Top Papers</h3><ol>")
-        for p in papers[:5]:
-            first_sentence = p.summary.split(".")[0] + "."
+    for i, p in enumerate(papers, 1):
+        source_label = p.source.replace("_", " ").title()
+        lines.append(f"<h3>{i}. <a href=\"{p.url}\">{p.title}</a></h3>")
+        lines.append(
+            f"<p><strong>Authors:</strong> {', '.join(p.authors)}<br>"
+            f"<strong>Source:</strong> {source_label} &middot; "
+            f"<strong>Date:</strong> {p.published_date} &middot; "
+            f"<strong>Relevance:</strong> {p.relevance_score:.0%}</p>"
+        )
+        if p.author_info:
             lines.append(
-                f'<li><a href="{p.url}">{p.title}</a> &mdash; {first_sentence}</li>'
+                f"<p><em>{p.author_info}</em></p>"
             )
-        lines.append("</ol>")
+        lines.append(f"<p>{p.summary}</p>")
+        if p.reliability_assessment:
+            lines.append(
+                f"<p><strong>Reliability:</strong> {p.reliability_assessment}</p>"
+            )
+        lines.append(f"<p><strong>Why it matters:</strong> {p.why_it_matters}</p>")
+        if p.related_papers:
+            lines.append("<p><strong>Related work:</strong></p><ul>")
+            for rp in p.related_papers:
+                if rp.url:
+                    lines.append(
+                        f'<li><a href="{rp.url}">{rp.title}</a> ({rp.year}) &mdash; {rp.summary}</li>'
+                    )
+                else:
+                    lines.append(
+                        f"<li>{rp.title} ({rp.year}) &mdash; {rp.summary}</li>"
+                    )
+            lines.append("</ul>")
+        lines.append("<hr>")
 
     if opportunities:
-        job_count = sum(
-            1 for o in opportunities if o.category in ("job", "fellowship")
-        )
-        cfp_count = sum(1 for o in opportunities if o.category == "cfp")
-        parts = []
-        if job_count:
-            parts.append(f"{job_count} job{'s' if job_count > 1 else ''}")
-        if cfp_count:
-            parts.append(f"{cfp_count} CFP{'s' if cfp_count > 1 else ''}")
-        other = len(opportunities) - job_count - cfp_count
-        if other:
-            parts.append(f"{other} other")
-        lines.append(
-            f"<p><strong>Opportunities:</strong> {len(opportunities)} new ({', '.join(parts)})</p>"
-        )
+        lines.append("<h3>Opportunities</h3><ul>")
+        for o in opportunities:
+            deadline = f" (deadline: {o.deadline})" if o.deadline else ""
+            lines.append(
+                f'<li><a href="{o.url}">{o.title}</a> &mdash; {o.organization}{deadline}</li>'
+            )
+        lines.append("</ul>")
 
     lines.append(f'<p><a href="{report_url}">Full report on GitHub</a></p>')
+    lines.append("</body></html>")
     return "\n".join(lines)
 
 
@@ -54,18 +75,33 @@ def _format_email_plain(
     report_url: str,
 ) -> str:
     today = date.today().isoformat()
-    lines = [f"Literature Guide — {today}", ""]
+    lines = [f"Literature Guide — {today}", "=" * 40, ""]
 
-    if papers:
-        lines.append("Top Papers:")
-        for i, p in enumerate(papers[:5], 1):
-            first_sentence = p.summary.split(".")[0] + "."
-            lines.append(f"{i}. {p.title} — {first_sentence}")
-            lines.append(f"   {p.url}")
+    for i, p in enumerate(papers, 1):
+        source_label = p.source.replace("_", " ").title()
+        lines.append(f"{i}. {p.title}")
+        lines.append(f"   Authors: {', '.join(p.authors)}")
+        lines.append(f"   Source: {source_label} | Date: {p.published_date}")
+        lines.append(f"   URL: {p.url}")
+        if p.author_info:
+            lines.append(f"   Who: {p.author_info}")
+        lines.append(f"   {p.summary}")
+        if p.reliability_assessment:
+            lines.append(f"   Reliability: {p.reliability_assessment}")
+        lines.append(f"   Why it matters: {p.why_it_matters}")
+        if p.related_papers:
+            lines.append("   Related:")
+            for rp in p.related_papers:
+                lines.append(f"   - {rp.title} ({rp.year}): {rp.summary}")
         lines.append("")
 
     if opportunities:
-        lines.append(f"Opportunities: {len(opportunities)} new")
+        lines.append("OPPORTUNITIES")
+        lines.append("-" * 20)
+        for o in opportunities:
+            deadline = f" (deadline: {o.deadline})" if o.deadline else ""
+            lines.append(f"- {o.title} — {o.organization}{deadline}")
+            lines.append(f"  {o.url}")
         lines.append("")
 
     lines.append(f"Full report: {report_url}")
@@ -86,8 +122,9 @@ def send_email_notification(
         return
 
     today = date.today().isoformat()
+    paper_count = len(papers)
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"Literature Guide — {today}"
+    msg["Subject"] = f"Literature Guide — {today} ({paper_count} papers)"
     msg["From"] = smtp_user
     msg["To"] = to_email
 

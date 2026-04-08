@@ -40,6 +40,8 @@ class SummarizedPaper:
     relevance_score: float
     summary: str
     why_it_matters: str
+    author_info: str
+    reliability_assessment: str
     related_papers: list[RelatedPaper]
     summary_file: str = ""
 

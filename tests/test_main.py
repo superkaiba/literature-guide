@@ -8,7 +8,7 @@ def _raw_paper():
 
 
 def _summarized_paper():
-    return SummarizedPaper(id="2026-04-07_test", title="Test", authors=["A"], url="https://example.com", doi=None, source="arxiv", published_date="2026-04-06", fetched_date="2026-04-07", topics=["safety"], relevance_score=0.9, summary="Summary.", why_it_matters="Matters.", related_papers=[])
+    return SummarizedPaper(id="2026-04-07_test", title="Test", authors=["A"], url="https://example.com", doi=None, source="arxiv", published_date="2026-04-06", fetched_date="2026-04-07", topics=["safety"], relevance_score=0.9, summary="Summary.", why_it_matters="Matters.", author_info="Author A is at MIT.", reliability_assessment="HIGH confidence.", related_papers=[])
 
 
 @patch("src.main.send_email_notification")

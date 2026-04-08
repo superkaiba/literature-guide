@@ -19,22 +19,34 @@ def generate_report(
 
     lines: list[str] = [f"# Literature Guide — {date_str}", ""]
 
+    # Highlights
     lines.append("## Highlights")
     for p in papers[:5]:
         lines.append(f"> **[{p.title}]({p.url})** — {p.summary.split('.')[0]}.")
     lines.append("")
 
+    # Papers
     lines.append("## Papers")
     lines.append("")
     for i, p in enumerate(papers, 1):
+        source_label = p.source.replace("_", " ").title()
         lines.append(f"### {i}. [{p.title}]({p.url})")
         lines.append(
-            f"**Authors:** {', '.join(p.authors)} | **Source:** {p.source} | **Date:** {p.published_date}"
+            f"**Authors:** {', '.join(p.authors)} | "
+            f"**Source:** {source_label} | "
+            f"**Date:** {p.published_date} | "
+            f"**Relevance:** {p.relevance_score:.0%}"
         )
         lines.append(f"**Topics:** {', '.join(p.topics)}")
         lines.append("")
+        if p.author_info:
+            lines.append(f"**About the authors:** {p.author_info}")
+            lines.append("")
         lines.append(f"**Summary:** {p.summary}")
         lines.append("")
+        if p.reliability_assessment:
+            lines.append(f"**Reliability:** {p.reliability_assessment}")
+            lines.append("")
         lines.append(f"**Why it matters:** {p.why_it_matters}")
         lines.append("")
         if p.related_papers:
@@ -47,6 +59,7 @@ def generate_report(
             lines.append("")
         lines.extend(["---", ""])
 
+    # Opportunities
     lines.append("## Opportunities")
     jobs = [o for o in opportunities if o.category in ("job", "fellowship")]
     cfps = [o for o in opportunities if o.category == "cfp"]
@@ -74,6 +87,7 @@ def generate_report(
     if not opportunities:
         lines.extend(["No new opportunities found today.", ""])
 
+    # Meta
     lines.append("## Meta")
     lines.append(f"- Sources checked: {sources_checked}")
     lines.append(f"- Papers scanned: ~{papers_scanned}")

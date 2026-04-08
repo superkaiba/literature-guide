@@ -17,6 +17,8 @@ def _sample_paper():
         relevance_score=0.95,
         summary="This paper does X.",
         why_it_matters="It advances Y.",
+        author_info="Alice and Bob are at MIT CSAIL.",
+        reliability_assessment="HIGH confidence.",
         related_papers=[
             RelatedPaper(
                 title="Related Work",

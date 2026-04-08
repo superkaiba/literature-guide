@@ -17,6 +17,8 @@ def _sample_paper(title="Test Paper"):
         relevance_score=0.9,
         summary="Summary here.",
         why_it_matters="Important.",
+        author_info="A is at DeepMind.",
+        reliability_assessment="HIGH confidence.",
         related_papers=[],
     )
 

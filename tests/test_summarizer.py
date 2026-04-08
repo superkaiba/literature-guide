@@ -8,7 +8,7 @@ def test_summarize_paper_returns_summarized(mock_anthropic_cls):
     mock_client = MagicMock()
     mock_response = MagicMock()
     mock_response.content = [MagicMock()]
-    mock_response.content[0].text = '{"summary": "This paper studies sparse autoencoders for extracting interpretable features.", "why_it_matters": "Directly advances mechanistic interpretability.", "related_papers": [{"title": "Toy Models of Superposition", "url": "https://arxiv.org/abs/2209.10652", "year": 2022, "summary": "Foundational work on superposition."}]}'
+    mock_response.content[0].text = '{"summary": "This paper studies sparse autoencoders for extracting interpretable features.", "why_it_matters": "Directly advances mechanistic interpretability.", "author_info": "Authors A and B are at Anthropic.", "reliability_assessment": "HIGH confidence. Established researchers.", "related_papers": [{"title": "Toy Models of Superposition", "url": "https://arxiv.org/abs/2209.10652", "year": 2022, "summary": "Foundational work on superposition."}]}'
     mock_client.messages.create.return_value = mock_response
     mock_anthropic_cls.return_value = mock_client
 
