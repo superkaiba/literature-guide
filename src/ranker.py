@@ -69,8 +69,9 @@ def rank_papers(
                 break
             except anthropic.APIStatusError as e:
                 if e.status_code in (429, 529) and attempt < 2:
-                    log.warning("API overloaded/rate-limited, retrying in %ds...", 2 ** attempt * 5)
-                    time.sleep(2 ** attempt * 5)
+                    wait = 2 ** attempt * 15
+                    log.warning("API overloaded/rate-limited, retrying in %ds...", wait)
+                    time.sleep(wait)
                 else:
                     raise
         try:

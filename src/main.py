@@ -118,13 +118,17 @@ def run_pipeline(config_path: str = "config.yml") -> None:
     logger.info("After dedup: %d papers (removed %d duplicates)", len(unique_papers), total_scanned - len(unique_papers))
 
     # 4. Rank papers by relevance
-    ranked = rank_papers(
-        unique_papers,
-        config.topics,
-        api_key=config.anthropic_api_key,
-        max_papers=config.max_papers,
-    )
-    logger.info("Ranked %d papers", len(ranked))
+    try:
+        ranked = rank_papers(
+            unique_papers,
+            config.topics,
+            api_key=config.anthropic_api_key,
+            max_papers=config.max_papers,
+        )
+        logger.info("Ranked %d papers", len(ranked))
+    except Exception:
+        logger.warning("Ranking failed, falling back to first %d papers", config.max_papers, exc_info=True)
+        ranked = [(p, 0.5, config.topics) for p in unique_papers[:config.max_papers]]
 
     # 5. Summarize each top paper
     summarized = []
