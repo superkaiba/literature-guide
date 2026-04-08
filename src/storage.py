@@ -14,30 +14,65 @@ def _paper_to_markdown(paper: SummarizedPaper) -> str:
         f"url: {paper.url}",
         f"source: {paper.source}",
         f"published_date: {paper.published_date}",
+        f"document_type: {paper.document_type}",
         f"topics: {paper.topics}",
         f"relevance_score: {paper.relevance_score}",
         "---",
         "",
-        "## Summary",
-        paper.summary,
-        "",
-        "## About the Authors",
-        paper.author_info or "No author information available.",
-        "",
-        "## Reliability Assessment",
-        paper.reliability_assessment or "No assessment available.",
-        "",
-        "## Why It Matters",
-        paper.why_it_matters,
+        f"# {paper.title}",
         "",
     ]
+
+    if paper.overview:
+        lines.extend(["## Overview", paper.overview, ""])
+
+    if paper.author_info:
+        lines.extend(["## About the Authors", paper.author_info, ""])
+
+    if paper.reliability_assessment:
+        lines.extend(["## Reliability Assessment", paper.reliability_assessment, ""])
+
+    if paper.main_goal:
+        lines.extend(["## Main Goal", paper.main_goal, ""])
+
+    if paper.key_findings:
+        lines.append("## Key Findings")
+        for f_ in paper.key_findings:
+            lines.append(f"- {f_}")
+        lines.append("")
+
+    if paper.methodology:
+        lines.extend(["## Methodology", paper.methodology, ""])
+
+    if paper.distinctive_features:
+        lines.extend(["## What's Novel", paper.distinctive_features, ""])
+
+    if paper.limitations:
+        lines.extend(["## Limitations & Open Questions", paper.limitations, ""])
+
+    if paper.implications:
+        lines.extend(["## Implications", paper.implications, ""])
+
+    if paper.critical_assessment:
+        lines.extend(["## Critical Assessment", paper.critical_assessment, ""])
+
+    if paper.key_terms:
+        lines.append("## Key Terms")
+        for kt in paper.key_terms:
+            lines.append(f"- **{kt.term}:** {kt.definition}")
+        lines.append("")
+
     if paper.related_papers:
         lines.append("## Related Papers")
         for rp in paper.related_papers:
             url_part = f"({rp.url})" if rp.url else ""
-            lines.append(f"### [{rp.title}]{url_part} ({rp.year})")
+            priority = f" — *{rp.priority}*" if rp.priority else ""
+            lines.append(f"### [{rp.title}]{url_part} ({rp.year}){priority}")
             lines.append(rp.summary)
+            if rp.relevance:
+                lines.append(f"*Why relevant: {rp.relevance}*")
             lines.append("")
+
     return "\n".join(lines)
 
 

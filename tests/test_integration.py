@@ -14,7 +14,6 @@ from src.main import run_pipeline
 @patch("src.fetchers.openalex.requests.get")
 @patch("src.fetchers.arxiv_fetcher.arxiv.Client")
 def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_rss, mock_reddit, mock_bsky, mock_notify, tmp_path, monkeypatch):
-    # Capture original working directory before chdir
     original_dir = os.getcwd()
     monkeypatch.chdir(tmp_path)
     shutil.copy(os.path.join(original_dir, "config.yml"), str(tmp_path / "config.yml"))
@@ -22,7 +21,7 @@ def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_r
     os.makedirs(tmp_path / "papers", exist_ok=True)
     os.makedirs(tmp_path / "reports", exist_ok=True)
 
-    # Mock arXiv - one paper
+    # Mock arXiv
     mock_result = MagicMock()
     mock_result.title = "Interpretability via SAEs"
     author = MagicMock(); author.name = "Test Author"
@@ -43,14 +42,14 @@ def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_r
     mock_reddit.return_value = MagicMock(status_code=200, json=lambda: {"data": {"children": []}})
     mock_bsky.return_value = MagicMock(status_code=200, json=lambda: {"feed": []})
 
-    # Mock Anthropic API — single mock since both ranker and summarizer share the same
-    # anthropic module. Use side_effect to return different clients for each instantiation.
+    # Mock ranker
     ranker_client = MagicMock()
     ranker_response = MagicMock()
     ranker_response.content = [MagicMock()]
     ranker_response.content[0].text = '[{"index": 0, "score": 0.95, "topics": ["mechanistic interpretability"]}]'
     ranker_client.messages.create.return_value = ranker_response
 
+    # Mock summarizer (with thinking blocks + new fields)
     summarizer_client = MagicMock()
     summarizer_response = MagicMock()
     thinking_block = MagicMock()
@@ -58,16 +57,23 @@ def test_full_pipeline_dry_run(mock_arxiv_client, mock_openalex, mock_s2, mock_r
     text_block = MagicMock()
     text_block.type = "text"
     text_block.text = json.dumps({
-        "summary": "This paper studies SAEs for interpretability.",
-        "why_it_matters": "Advances mechanistic interpretability.",
+        "document_type": "research paper",
+        "overview": "This paper studies SAEs for interpretability.",
+        "main_goal": "Scale SAEs to large models.",
+        "key_findings": ["SAE features are interpretable at scale"],
+        "methodology": "Trained SAEs on GPT-2 through GPT-4.",
+        "distinctive_features": "First scaling study of SAEs.",
+        "limitations": "Only English text.",
+        "implications": "Scalable interpretability is possible.",
+        "critical_assessment": "Strong methodology.",
         "author_info": "Test Author is a researcher at Anthropic.",
-        "reliability_assessment": "HIGH confidence. Published by established researchers.",
-        "related_papers": [{"title": "Toy Models of Superposition", "url": "https://arxiv.org/abs/2209.10652", "year": 2022, "summary": "Foundational work on superposition."}]
+        "reliability_assessment": "HIGH confidence.",
+        "key_terms": [{"term": "SAE", "definition": "Sparse Autoencoder"}],
+        "related_papers": [{"title": "Toy Models of Superposition", "url": "https://arxiv.org/abs/2209.10652", "year": 2022, "summary": "Foundational work.", "priority": "Essential", "relevance": "Theoretical foundation"}],
     })
     summarizer_response.content = [thinking_block, text_block]
     summarizer_client.messages.create.return_value = summarizer_response
 
-    # The ranker is called first, then the summarizer
     anthropic_clients = [ranker_client, summarizer_client]
     call_index = {"i": 0}
 

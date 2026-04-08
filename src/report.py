@@ -22,7 +22,7 @@ def generate_report(
     # Highlights
     lines.append("## Highlights")
     for p in papers[:5]:
-        lines.append(f"> **[{p.title}]({p.url})** — {p.summary.split('.')[0]}.")
+        lines.append(f"> **[{p.title}]({p.url})** — {p.overview.split('.')[0]}.")
     lines.append("")
 
     # Papers
@@ -35,27 +35,81 @@ def generate_report(
             f"**Authors:** {', '.join(p.authors)} | "
             f"**Source:** {source_label} | "
             f"**Date:** {p.published_date} | "
+            f"**Type:** {p.document_type} | "
             f"**Relevance:** {p.relevance_score:.0%}"
         )
-        lines.append(f"**Topics:** {', '.join(p.topics)}")
         lines.append("")
+
+        # Author info
         if p.author_info:
             lines.append(f"**About the authors:** {p.author_info}")
             lines.append("")
-        lines.append(f"**Summary:** {p.summary}")
-        lines.append("")
+
+        # Reliability
         if p.reliability_assessment:
             lines.append(f"**Reliability:** {p.reliability_assessment}")
             lines.append("")
-        lines.append(f"**Why it matters:** {p.why_it_matters}")
-        lines.append("")
+
+        # Overview
+        if p.overview:
+            lines.append(f"**Overview:** {p.overview}")
+            lines.append("")
+
+        # Main goal
+        if p.main_goal:
+            lines.append(f"**Main goal:** {p.main_goal}")
+            lines.append("")
+
+        # Key findings
+        if p.key_findings:
+            lines.append("**Key findings:**")
+            for finding in p.key_findings:
+                lines.append(f"- {finding}")
+            lines.append("")
+
+        # Methodology
+        if p.methodology:
+            lines.append(f"**Methodology:** {p.methodology}")
+            lines.append("")
+
+        # What's novel
+        if p.distinctive_features:
+            lines.append(f"**What's novel:** {p.distinctive_features}")
+            lines.append("")
+
+        # Limitations
+        if p.limitations:
+            lines.append(f"**Limitations:** {p.limitations}")
+            lines.append("")
+
+        # Implications
+        if p.implications:
+            lines.append(f"**Implications:** {p.implications}")
+            lines.append("")
+
+        # Critical assessment
+        if p.critical_assessment:
+            lines.append(f"**Critical assessment:** {p.critical_assessment}")
+            lines.append("")
+
+        # Key terms
+        if p.key_terms:
+            lines.append("**Key terms:**")
+            for kt in p.key_terms:
+                lines.append(f"- **{kt.term}:** {kt.definition}")
+            lines.append("")
+
+        # Related papers
         if p.related_papers:
             lines.append("**Related papers:**")
             for rp in p.related_papers:
                 url_part = f"({rp.url})" if rp.url else ""
+                priority_tag = f" `{rp.priority}`" if rp.priority else ""
                 lines.append(
-                    f"- [{rp.title}]{url_part} ({rp.year}) — {rp.summary}"
+                    f"- [{rp.title}]{url_part} ({rp.year}){priority_tag} — {rp.summary}"
                 )
+                if rp.relevance:
+                    lines.append(f"  *Why relevant: {rp.relevance}*")
             lines.append("")
         lines.extend(["---", ""])
 

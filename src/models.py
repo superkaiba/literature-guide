@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, field, asdict
-from datetime import date
-import json
+from dataclasses import dataclass, field
 import re
 
 
@@ -24,6 +22,14 @@ class RelatedPaper:
     url: str
     year: int
     summary: str
+    priority: str = ""  # "Essential", "Recommended", "Optional"
+    relevance: str = ""  # why it's relevant
+
+
+@dataclass
+class KeyTerm:
+    term: str
+    definition: str
 
 
 @dataclass
@@ -38,10 +44,21 @@ class SummarizedPaper:
     fetched_date: str
     topics: list[str]
     relevance_score: float
-    summary: str
-    why_it_matters: str
+    # Core analysis
+    document_type: str  # "research paper", "blog post", "review", etc.
+    overview: str  # 2-3 sentence overview
+    main_goal: str  # primary objective in plain language
+    key_findings: list[str]  # 3-5 most important results/claims
+    methodology: str  # how the research was conducted
+    distinctive_features: str  # what makes this unique
+    limitations: str  # weaknesses and open questions
+    implications: str  # why it matters, practical/theoretical consequences
+    critical_assessment: str  # are conclusions well-supported?
+    # Author and reliability
     author_info: str
     reliability_assessment: str
+    # Terms and related work
+    key_terms: list[KeyTerm]
     related_papers: list[RelatedPaper]
     summary_file: str = ""
 

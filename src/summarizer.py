@@ -7,41 +7,65 @@ from datetime import date
 import anthropic
 
 from src.json_utils import extract_json
-from src.models import RawPaper, SummarizedPaper, RelatedPaper, make_paper_id
+from src.models import RawPaper, SummarizedPaper, RelatedPaper, KeyTerm, make_paper_id
 
 log = logging.getLogger(__name__)
 
-SUMMARIZE_PROMPT = """You are a research assistant for an ML researcher focused on: {topics}.
+SUMMARIZE_PROMPT = """You are an expert academic paper reviewer and research analyst for an ML researcher focused on: {topics}.
 
-Analyze this paper thoroughly. Use web search to look up the authors and verify details.
+Thoroughly analyze this paper. Use web search to look up the authors, verify claims, and find related discussions.
 
 Title: {title}
 Authors: {authors}
 Abstract: {abstract}
 Source: {source}
 
-Your tasks:
-1. Search the web for each author to find their current affiliation, h-index, notable prior work, and research focus.
-2. Search for any discussion of this paper (blog posts, Twitter/X threads, reviews).
-3. Assess the paper's reliability based on what you find.
+## Your Tasks
 
-Return JSON:
+1. **Search the web** for each author — find their current affiliation, h-index, notable prior work, and research focus.
+2. **Search for discussion** of this paper — blog posts, Twitter/X threads, conference reviews, Reddit threads.
+3. **Identify related work** — search for the most important papers this builds on or competes with.
+4. **Assess reliability** based on everything you find.
+
+## Return JSON with this structure:
+
 {{
-    "summary": "4-6 sentences providing a detailed summary. Describe the key contribution, methodology, main findings, and implications. Be specific about technical details.",
-    "why_it_matters": "2-3 sentences explaining why this matters for the researcher's interests. Connect to broader trends.",
-    "author_info": "2-4 sentences about the authors based on your web search. Include their current affiliations, notable prior work (with paper names), h-index or citation counts if found, and research focus areas.",
-    "reliability_assessment": "2-3 sentences assessing credibility. Consider: author track record and citation counts, institutional affiliation, peer-review status vs preprint, methodology quality, whether claims are proportionate to evidence. Rate as HIGH/MEDIUM/LOW confidence with explanation.",
+    "document_type": "research paper | blog post | review | commentary | preprint",
+    "overview": "2-3 sentences: What type of document is this? What is the central question or problem being addressed?",
+    "main_goal": "State the primary objective/hypothesis in plain language. What are the authors trying to show or build?",
+    "key_findings": [
+        "Finding 1: The most important result or claim, with supporting evidence",
+        "Finding 2: Second most important result",
+        "Finding 3: Third most important result"
+    ],
+    "methodology": "How was the research conducted? What techniques, models, datasets, or frameworks were used? Be specific about architecture details, training procedures, evaluation metrics.",
+    "distinctive_features": "What makes this work unique compared to existing literature? What is the novel contribution?",
+    "limitations": "What did the authors acknowledge as weaknesses? What remains unanswered? What assumptions seem questionable?",
+    "implications": "Why does this matter? What are the practical or theoretical consequences? How might this change the field?",
+    "critical_assessment": "Are the conclusions well-supported by the evidence? Are there any assumptions that seem questionable? How does this fit into the broader field? Comment on sample sizes, statistical significance, or logical structure as appropriate.",
+    "author_info": "2-4 sentences about the authors based on your web search. Include current affiliations, notable prior work (with specific paper names), h-index or citation counts if found, and research focus areas.",
+    "reliability_assessment": "Rate as HIGH/MEDIUM/LOW confidence. Consider: author track record and citations, institutional affiliation, peer-review status vs preprint, methodology rigor, whether claims are proportionate to evidence, any red flags or concerns.",
+    "key_terms": [
+        {{"term": "Technical Term", "definition": "Clear, concise definition essential to understanding the work"}},
+        {{"term": "Another Term", "definition": "Definition"}}
+    ],
     "related_papers": [
         {{
             "title": "Exact title of a real, existing paper",
-            "url": "URL if known, otherwise empty string",
+            "url": "URL (verify via search)",
             "year": 2024,
-            "summary": "2-3 sentences summarizing this related paper and how it connects."
+            "summary": "2-3 sentences summarizing this paper.",
+            "priority": "Essential | Recommended | Optional",
+            "relevance": "Why this is relevant: e.g., foundational work this paper builds on, contrasting approach, deeper dive into a method, follow-up work"
         }}
     ]
 }}
 
-Suggest 1-2 related papers. They must be REAL papers — verify via web search if unsure.
+## Guidelines for related papers:
+- Suggest 2-4 related papers. They MUST be real — verify via web search.
+- Prioritize: (1) foundational papers this builds on, (2) contrasting/competing approaches, (3) methodological references, (4) recent follow-up work.
+- Label priority as "Essential" (must-read), "Recommended" (valuable context), or "Optional" (deeper exploration).
+
 Return ONLY the JSON, no other text."""
 
 
@@ -101,10 +125,17 @@ def summarize_paper(
         RelatedPaper(
             title=r["title"],
             url=r.get("url", ""),
-            year=r["year"],
-            summary=r["summary"],
+            year=r.get("year", 0),
+            summary=r.get("summary", ""),
+            priority=r.get("priority", ""),
+            relevance=r.get("relevance", ""),
         )
         for r in data.get("related_papers", [])
+    ]
+
+    key_terms = [
+        KeyTerm(term=t["term"], definition=t["definition"])
+        for t in data.get("key_terms", [])
     ]
 
     return SummarizedPaper(
@@ -118,9 +149,17 @@ def summarize_paper(
         fetched_date=today,
         topics=topics,
         relevance_score=score,
-        summary=data.get("summary", ""),
-        why_it_matters=data.get("why_it_matters", ""),
+        document_type=data.get("document_type", ""),
+        overview=data.get("overview", ""),
+        main_goal=data.get("main_goal", ""),
+        key_findings=data.get("key_findings", []),
+        methodology=data.get("methodology", ""),
+        distinctive_features=data.get("distinctive_features", ""),
+        limitations=data.get("limitations", ""),
+        implications=data.get("implications", ""),
+        critical_assessment=data.get("critical_assessment", ""),
         author_info=data.get("author_info", ""),
         reliability_assessment=data.get("reliability_assessment", ""),
+        key_terms=key_terms,
         related_papers=related,
     )
