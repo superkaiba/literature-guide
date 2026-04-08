@@ -76,10 +76,17 @@ Return ONLY the JSON, no other text."""
 
 
 def _extract_text_from_response(response) -> str:
-    """Extract text content from a response that may contain thinking blocks."""
-    for block in response.content:
-        if block.type == "text":
-            return block.text
+    """Extract text content from a response that may contain thinking/tool blocks.
+
+    With web search + extended thinking, responses can have many block types.
+    We want the last text block, which contains the final JSON answer.
+    If stop_reason is 'end_turn' but no text block exists, the model may have
+    ended in a tool_use block — we need to handle that.
+    """
+    text_blocks = [b.text for b in response.content if b.type == "text"]
+    if text_blocks:
+        # Return the last text block (final answer after tool use)
+        return text_blocks[-1]
     return ""
 
 
@@ -97,7 +104,7 @@ def summarize_paper(
         try:
             response = client.messages.create(
                 model=model,
-                max_tokens=16000,
+                max_tokens=32000,
                 thinking={
                     "type": "enabled",
                     "budget_tokens": 10000,
@@ -132,8 +139,13 @@ def summarize_paper(
 
     raw_text = _extract_text_from_response(response)
     if not raw_text:
-        log.warning("No text content in response for '%s'", paper.title)
-        raw_text = "{}"
+        block_types = [b.type for b in response.content]
+        stop = getattr(response, "stop_reason", "unknown")
+        log.warning(
+            "No text content in response for '%s' (stop_reason=%s, blocks=%s)",
+            paper.title, stop, block_types,
+        )
+        raise ValueError(f"No text in response for '{paper.title}' (stop={stop})")
 
     data = json.loads(extract_json(raw_text))
 
