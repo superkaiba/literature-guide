@@ -12,9 +12,13 @@ from src.models import RawPaper, SummarizedPaper, RelatedPaper, KeyTerm, make_pa
 
 log = logging.getLogger(__name__)
 
-SUMMARIZE_PROMPT = """You are an expert academic paper reviewer and research analyst for an ML researcher focused on: {topics}.
+SUMMARIZE_PROMPT = """You are an expert academic paper reviewer and research analyst.
 
-Thoroughly analyze this paper. Use web search to look up the authors, verify claims, and find related discussions.
+## About the researcher you're writing for
+They are an ML researcher focused on mechanistic interpretability, AI safety, alignment, language model personas, and weird generalization phenomena (emergent misalignment, subliminal learning, superposition). They also want to stay broadly current with important ML/AI developments. Their specific interests include: {topics}.
+
+## Your task
+Thoroughly analyze this paper. Use web search to look up the authors, verify claims, and find related discussions. Tailor the "implications" section to explain how this connects to the researcher's interests — even for papers outside their core topics, explain why it matters for the broader field they operate in.
 
 Title: {title}
 Authors: {authors}

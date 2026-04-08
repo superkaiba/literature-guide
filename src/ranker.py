@@ -12,22 +12,34 @@ log = logging.getLogger(__name__)
 
 from src.models import RawPaper
 
-RANK_PROMPT = """You are a research paper relevance scorer. Given a list of papers and target research topics, score each paper's relevance from 0.0 to 1.0.
+RANK_PROMPT = """You are a research paper relevance scorer for an ML researcher.
 
-Target topics:
+## About the researcher
+They are focused on mechanistic interpretability, AI safety, alignment, language model personas, and weird generalization phenomena (emergent misalignment, subliminal learning, superposition). They want to stay current with the broader ML/AI field as well.
+
+## Their specific research interests:
 {topics}
 
-Papers:
+## Scoring instructions
+
+Score each paper's relevance from 0.0 to 1.0 using BOTH criteria:
+
+**Criterion 1 — Topic relevance:**
+- 0.9-1.0: Directly about one of the researcher's specific interests
+- 0.7-0.9: Closely related to their interests
+- 0.4-0.7: Tangentially related
+
+**Criterion 2 — General importance (applies even if not topic-relevant):**
+- Any paper that represents a major advance in ML/AI (new SOTA, breakthrough architecture, important benchmark result, significant finding from a top lab) should score AT LEAST 0.6, even if it's outside the researcher's specific topics
+- Landmark papers from Anthropic, DeepMind, OpenAI, Meta AI, Google Brain, etc. on foundation models, capabilities, or safety should score at least 0.7
+
+Use the HIGHER of the two scores.
+
+## Papers to score:
 {papers}
 
 Return a JSON array with one object per paper:
 [{{"index": 0, "score": 0.95, "topics": ["topic1", "topic2"]}}, ...]
-
-Score meaning:
-- 0.9-1.0: Directly about a target topic
-- 0.7-0.9: Closely related, likely relevant
-- 0.4-0.7: Tangentially related
-- 0.0-0.4: Not relevant
 
 Return ONLY the JSON array, no other text."""
 
