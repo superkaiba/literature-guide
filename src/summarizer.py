@@ -102,7 +102,8 @@ def summarize_paper(
 
     for attempt in range(3):
         try:
-            response = client.messages.create(
+            # Streaming is required for long-running requests (extended thinking + web search)
+            with client.messages.stream(
                 model=model,
                 max_tokens=32000,
                 thinking={
@@ -127,7 +128,8 @@ def summarize_paper(
                         ),
                     }
                 ],
-            )
+            ) as stream:
+                response = stream.get_final_message()
             break
         except anthropic.APIStatusError as e:
             if e.status_code in (429, 529) and attempt < 2:
